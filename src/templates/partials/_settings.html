@@ -1,0 +1,81 @@
+<!-- begin settings -->
+<div class="settings">
+	{% for item in [
+		{ title: 'Cash Register Variance' },
+		{ title: 'Return' },
+		{ title: 'Void' },
+		{ title: 'Inventory Count Results' },
+		{ title: 'Store Transfer Not Received' }
+	] %}
+		<div class="settings__section" data-accordion-item>
+			<div class="settings__header" data-accordion-control>
+				<div class="settings__title">{{item.title}}{{mixins.icon('angle-down', 'settings__arrow')}}</div>
+			</div>
+			<div class="settings__body" data-accordion-content>
+				<div class="settings__inner">
+					<div class="settings__row">
+						{{mixins.checkbox({
+							text: 'Send alert'
+						})}}
+					</div>
+					<div class="settings__row">
+						<div class="form-group">
+							<div class="label form-group__label">When:</div>
+							<div class="form-group__field">
+								<div class="form-group__description">Cash register is closed and variance is more than $</div>
+								<div class="form-group__control form-group__control_inline">
+									<input type="text" class="input form-group__input_center" value="10 000">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="settings__table">
+						<div class="settings__thead">
+							<div class="settings__tr">
+								<div class="label settings__td settings__td_lg">To:</div>
+								<div class="label settings__td settings__td_sm">via channel:</div>
+							</div>
+						</div>
+						<div class="settings__tbody">
+							{% for item in range(0,2) %}
+							    <div class="settings__tr">
+							    	<div class="settings__td settings__td_lg">
+							    		<select class="select">
+							    			<option value="Store manager">Store manager</option>
+							    			<option value="Store manager {{loop.index}}">Store manager {{loop.index}}</option>
+							    		</select>
+							    	</div>
+							    	<div class="settings__td settings__td_sm">
+							    		<select class="select">
+							    			<option value="SMS">SMS</option>
+							    			<option value="SMS {{loop.index}}">SMS {{loop.index}}</option>
+							    		</select>
+							    	</div>
+							    	{% if loop.index > 1 %}
+											<button class="btn-remove settings__remove"><span></span></button>
+							    	{% endif %}
+							    </div>
+							{% endfor %}
+						</div>
+						<div class="settings__tfoot">
+							<div class="settings__tr">
+								<div class="settings__td">
+									<button class="btn btn_plus"></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="settings__footer">
+						<div class="settings__footer-btn">
+							<button class="btn btn_primary">Save</button>
+						</div>
+						<div class="settings__footer-btn">
+							<button class="btn btn_gray">Cancel</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+</div>
+<!-- end settings -->

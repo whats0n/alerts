@@ -1,0 +1,87 @@
+.settings
+	padding: 40px 20px
+	margin: 0 auto
+	max-width: 800px
+	&__section
+		border-radius: 3px
+		box-shadow: 0 2px 5px 1px rgba($darkGray, 0.1)
+		&:not(:last-child)
+			margin-bottom: 20px
+	&__header
+		padding: 30px
+		transition: color 0.25s
+		&.is-active
+			.settings__arrow
+				transform: rotate(180deg)
+		+hover
+			color: $blue
+		+hover('metro')
+			color: $metroSecondary
+	&__title
+		position: relative
+		padding-right: 1.5em
+		+f(24px, 700, 1)
+	&__arrow
+		position: absolute
+		top: 50%
+		right: 0
+		margin-top: -0.25em
+		fill: currentColor
+		font-size: 0.5em
+		transition: transform 0.25s
+	&__inner
+		padding: 30px
+		border-top: 1px solid rgba($black, 0.1)
+	&__row
+		&:not(:last-child)
+			margin-bottom: 30px
+	&__table
+		margin: -8px
+	&__tr
+		position: relative
+		display: flex
+		padding-right: 40px
+	&__td
+		padding: 8px
+		flex-grow: 1
+		flex-shrink: 1
+		&_lg
+			flex-basis: 60%
+		&_sm
+			flex-basis: 40%
+	&__tfoot
+		padding-top: 10px
+	&__remove
+		position: absolute
+		top: 50%
+		right: 0
+		margin-top: -20px
+		width: 40px
+		height: 40px
+		background: none
+		span
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: rotate(45deg)
+			&:before,
+			&:after
+				content: ''
+				position: absolute
+				top: 50%
+				left: 50%
+				width: 18px
+				height: 1px
+				background: currentColor
+				transform: translate(-50%,-50%)
+			&:after
+				transform: translate(-50%,-50%) rotate(90deg)
+	&__footer
+		display: flex
+		align-items: center
+		justify-content: center
+		margin: -10px
+		&-btn
+			padding: 10px
+			width: 100%
+			max-width: 140px
