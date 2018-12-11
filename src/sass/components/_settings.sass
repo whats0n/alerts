@@ -2,6 +2,8 @@
 	padding: 40px 20px
 	margin: 0 auto
 	max-width: 800px
+	+xs
+		padding: 15px
 	&__section
 		border-radius: 3px
 		box-shadow: 0 2px 5px 1px rgba($darkGray, 0.1)
@@ -10,6 +12,8 @@
 	&__header
 		padding: 30px
 		transition: color 0.25s
+		+xs
+			padding: 20px 15px
 		&.is-active
 			.settings__arrow
 				transform: rotate(180deg)
@@ -21,6 +25,8 @@
 		position: relative
 		padding-right: 1.5em
 		+f(24px, 700, 1)
+		+xs
+			+f(20px)
 	&__arrow
 		position: absolute
 		top: 50%
@@ -32,6 +38,8 @@
 	&__inner
 		padding: 30px
 		border-top: 1px solid rgba($black, 0.1)
+		+xs
+			padding: 15px
 	&__row
 		&:not(:last-child)
 			margin-bottom: 30px
