@@ -31,26 +31,23 @@
       <div class="main">
         <!-- begin settings -->
         <div class="settings">
-          <div class="settings__section" data-accordion-item>
-            <div class="settings__header" data-accordion-control>
-              <div class="settings__title">Cash Register Variance <svg class="icon icon-angle-down settings__arrow"><use xlink:href="img/sprite.svg#icon-angle-down"></use></svg> </div>
+          <div class="settings__section">
+            <div class="settings__header">
+              <div class="settings__title">Cash Register Variance</div>
             </div>
-            <div class="settings__body" data-accordion-content>
+            <div class="settings__body">
               <div class="settings__inner">
-                <div class="settings__row"> <label class="checkbox">
-		<input type="checkbox" class="checkbox__input">
-		<span class="checkbox__icon">
-			
-	<svg class="icon icon-check checkbox__icon-in"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
-
-		</span>
-		<span class="label checkbox__text">Send alert</span>
+                <div class="settings__row">
+                  <div class="form-group form-group_inline"> <label for="send-alert" class="label form-group__label">Send alert</label> <label class="awesome-switcher form-group__switcher">
+		<input id="send-alert" type="checkbox" class="awesome-switcher__input">
+		<span class="awesome-switcher__control"></span>
 	</label> </div>
+                </div>
                 <div class="settings__row">
                   <div class="form-group">
                     <div class="label form-group__label">When:</div>
                     <div class="form-group__field">
-                      <div class="form-group__description">Cash register is closed and variance is more than $</div>
+                      <div class="form-group__description">Cash register is closed and variance is&nbsp;more&nbsp;than&nbsp;$</div>
                       <div class="form-group__control form-group__control_inline"> <input type="text" class="input form-group__input_center" value="10 000"> </div>
                     </div>
                   </div>
@@ -64,288 +61,36 @@
                   </div>
                   <div class="settings__tbody">
                     <div class="settings__tr">
-                      <div class="settings__td settings__td_lg"> <select class="select">
-							    			<option value="Store manager">Store manager</option>
-							    			<option value="Store manager 1">Store manager 1</option>
-							    		</select> </div>
-                      <div class="settings__td settings__td_sm"> <select class="select">
-							    			<option value="SMS">SMS</option>
-							    			<option value="SMS 1">SMS 1</option>
-							    		</select> </div>
+                      <div class="settings__td settings__td_lg">
+                        <div class="label settings__td-label">To:</div> <select class="select ">
+						    			<option value="Store manager">Store manager</option>
+						    			<option value="Administrator">Administrator</option>
+						    		</select>
+                        <div class="error-message is-hidden">Please select role to whom alert must be sent</div>
+                      </div>
+                      <div class="settings__td settings__td_sm">
+                        <div class="label settings__td-label">via channel:</div> <select class="select">
+						    			<option value="SMS">SMS</option>
+						    			<option value="E-mail">E-mail</option>
+						    		</select> </div>
                     </div>
                     <div class="settings__tr">
-                      <div class="settings__td settings__td_lg"> <select class="select">
-							    			<option value="Store manager">Store manager</option>
-							    			<option value="Store manager 2">Store manager 2</option>
-							    		</select> </div>
-                      <div class="settings__td settings__td_sm"> <select class="select">
-							    			<option value="SMS">SMS</option>
-							    			<option value="SMS 2">SMS 2</option>
-							    		</select> </div> <button class="btn-remove settings__remove"><span></span></button> </div>
+                      <div class="settings__td settings__td_lg">
+                        <div class="label settings__td-label">To:</div> <select class="select is-error">
+						    			<option value="Store manager">Store manager</option>
+						    			<option value="Administrator">Administrator</option>
+						    		</select>
+                        <div class="error-message ">Please select role to whom alert must be sent</div>
+                      </div>
+                      <div class="settings__td settings__td_sm">
+                        <div class="label settings__td-label">via channel:</div> <select class="select">
+						    			<option value="SMS">SMS</option>
+						    			<option value="E-mail">E-mail</option>
+						    		</select> </div> <button class="btn-remove settings__remove"><span></span></button> </div>
                   </div>
                   <div class="settings__tfoot">
                     <div class="settings__tr">
-                      <div class="settings__td"> <button class="btn btn_plus"></button> </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="settings__footer">
-                  <div class="settings__footer-btn"> <button class="btn btn_primary">Save</button> </div>
-                  <div class="settings__footer-btn"> <button class="btn btn_gray">Cancel</button> </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="settings__section" data-accordion-item>
-            <div class="settings__header" data-accordion-control>
-              <div class="settings__title">Return <svg class="icon icon-angle-down settings__arrow"><use xlink:href="img/sprite.svg#icon-angle-down"></use></svg> </div>
-            </div>
-            <div class="settings__body" data-accordion-content>
-              <div class="settings__inner">
-                <div class="settings__row"> <label class="checkbox">
-		<input type="checkbox" class="checkbox__input">
-		<span class="checkbox__icon">
-			
-	<svg class="icon icon-check checkbox__icon-in"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
-
-		</span>
-		<span class="label checkbox__text">Send alert</span>
-	</label> </div>
-                <div class="settings__row">
-                  <div class="form-group">
-                    <div class="label form-group__label">When:</div>
-                    <div class="form-group__field">
-                      <div class="form-group__description">Cash register is closed and variance is more than $</div>
-                      <div class="form-group__control form-group__control_inline"> <input type="text" class="input form-group__input_center" value="10 000"> </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="settings__table">
-                  <div class="settings__thead">
-                    <div class="settings__tr">
-                      <div class="label settings__td settings__td_lg">To:</div>
-                      <div class="label settings__td settings__td_sm">via channel:</div>
-                    </div>
-                  </div>
-                  <div class="settings__tbody">
-                    <div class="settings__tr">
-                      <div class="settings__td settings__td_lg"> <select class="select">
-							    			<option value="Store manager">Store manager</option>
-							    			<option value="Store manager 1">Store manager 1</option>
-							    		</select> </div>
-                      <div class="settings__td settings__td_sm"> <select class="select">
-							    			<option value="SMS">SMS</option>
-							    			<option value="SMS 1">SMS 1</option>
-							    		</select> </div>
-                    </div>
-                    <div class="settings__tr">
-                      <div class="settings__td settings__td_lg"> <select class="select">
-							    			<option value="Store manager">Store manager</option>
-							    			<option value="Store manager 2">Store manager 2</option>
-							    		</select> </div>
-                      <div class="settings__td settings__td_sm"> <select class="select">
-							    			<option value="SMS">SMS</option>
-							    			<option value="SMS 2">SMS 2</option>
-							    		</select> </div> <button class="btn-remove settings__remove"><span></span></button> </div>
-                  </div>
-                  <div class="settings__tfoot">
-                    <div class="settings__tr">
-                      <div class="settings__td"> <button class="btn btn_plus"></button> </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="settings__footer">
-                  <div class="settings__footer-btn"> <button class="btn btn_primary">Save</button> </div>
-                  <div class="settings__footer-btn"> <button class="btn btn_gray">Cancel</button> </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="settings__section" data-accordion-item>
-            <div class="settings__header" data-accordion-control>
-              <div class="settings__title">Void <svg class="icon icon-angle-down settings__arrow"><use xlink:href="img/sprite.svg#icon-angle-down"></use></svg> </div>
-            </div>
-            <div class="settings__body" data-accordion-content>
-              <div class="settings__inner">
-                <div class="settings__row"> <label class="checkbox">
-		<input type="checkbox" class="checkbox__input">
-		<span class="checkbox__icon">
-			
-	<svg class="icon icon-check checkbox__icon-in"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
-
-		</span>
-		<span class="label checkbox__text">Send alert</span>
-	</label> </div>
-                <div class="settings__row">
-                  <div class="form-group">
-                    <div class="label form-group__label">When:</div>
-                    <div class="form-group__field">
-                      <div class="form-group__description">Cash register is closed and variance is more than $</div>
-                      <div class="form-group__control form-group__control_inline"> <input type="text" class="input form-group__input_center" value="10 000"> </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="settings__table">
-                  <div class="settings__thead">
-                    <div class="settings__tr">
-                      <div class="label settings__td settings__td_lg">To:</div>
-                      <div class="label settings__td settings__td_sm">via channel:</div>
-                    </div>
-                  </div>
-                  <div class="settings__tbody">
-                    <div class="settings__tr">
-                      <div class="settings__td settings__td_lg"> <select class="select">
-							    			<option value="Store manager">Store manager</option>
-							    			<option value="Store manager 1">Store manager 1</option>
-							    		</select> </div>
-                      <div class="settings__td settings__td_sm"> <select class="select">
-							    			<option value="SMS">SMS</option>
-							    			<option value="SMS 1">SMS 1</option>
-							    		</select> </div>
-                    </div>
-                    <div class="settings__tr">
-                      <div class="settings__td settings__td_lg"> <select class="select">
-							    			<option value="Store manager">Store manager</option>
-							    			<option value="Store manager 2">Store manager 2</option>
-							    		</select> </div>
-                      <div class="settings__td settings__td_sm"> <select class="select">
-							    			<option value="SMS">SMS</option>
-							    			<option value="SMS 2">SMS 2</option>
-							    		</select> </div> <button class="btn-remove settings__remove"><span></span></button> </div>
-                  </div>
-                  <div class="settings__tfoot">
-                    <div class="settings__tr">
-                      <div class="settings__td"> <button class="btn btn_plus"></button> </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="settings__footer">
-                  <div class="settings__footer-btn"> <button class="btn btn_primary">Save</button> </div>
-                  <div class="settings__footer-btn"> <button class="btn btn_gray">Cancel</button> </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="settings__section" data-accordion-item>
-            <div class="settings__header" data-accordion-control>
-              <div class="settings__title">Inventory Count Results <svg class="icon icon-angle-down settings__arrow"><use xlink:href="img/sprite.svg#icon-angle-down"></use></svg> </div>
-            </div>
-            <div class="settings__body" data-accordion-content>
-              <div class="settings__inner">
-                <div class="settings__row"> <label class="checkbox">
-		<input type="checkbox" class="checkbox__input">
-		<span class="checkbox__icon">
-			
-	<svg class="icon icon-check checkbox__icon-in"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
-
-		</span>
-		<span class="label checkbox__text">Send alert</span>
-	</label> </div>
-                <div class="settings__row">
-                  <div class="form-group">
-                    <div class="label form-group__label">When:</div>
-                    <div class="form-group__field">
-                      <div class="form-group__description">Cash register is closed and variance is more than $</div>
-                      <div class="form-group__control form-group__control_inline"> <input type="text" class="input form-group__input_center" value="10 000"> </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="settings__table">
-                  <div class="settings__thead">
-                    <div class="settings__tr">
-                      <div class="label settings__td settings__td_lg">To:</div>
-                      <div class="label settings__td settings__td_sm">via channel:</div>
-                    </div>
-                  </div>
-                  <div class="settings__tbody">
-                    <div class="settings__tr">
-                      <div class="settings__td settings__td_lg"> <select class="select">
-							    			<option value="Store manager">Store manager</option>
-							    			<option value="Store manager 1">Store manager 1</option>
-							    		</select> </div>
-                      <div class="settings__td settings__td_sm"> <select class="select">
-							    			<option value="SMS">SMS</option>
-							    			<option value="SMS 1">SMS 1</option>
-							    		</select> </div>
-                    </div>
-                    <div class="settings__tr">
-                      <div class="settings__td settings__td_lg"> <select class="select">
-							    			<option value="Store manager">Store manager</option>
-							    			<option value="Store manager 2">Store manager 2</option>
-							    		</select> </div>
-                      <div class="settings__td settings__td_sm"> <select class="select">
-							    			<option value="SMS">SMS</option>
-							    			<option value="SMS 2">SMS 2</option>
-							    		</select> </div> <button class="btn-remove settings__remove"><span></span></button> </div>
-                  </div>
-                  <div class="settings__tfoot">
-                    <div class="settings__tr">
-                      <div class="settings__td"> <button class="btn btn_plus"></button> </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="settings__footer">
-                  <div class="settings__footer-btn"> <button class="btn btn_primary">Save</button> </div>
-                  <div class="settings__footer-btn"> <button class="btn btn_gray">Cancel</button> </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="settings__section" data-accordion-item>
-            <div class="settings__header" data-accordion-control>
-              <div class="settings__title">Store Transfer Not Received <svg class="icon icon-angle-down settings__arrow"><use xlink:href="img/sprite.svg#icon-angle-down"></use></svg> </div>
-            </div>
-            <div class="settings__body" data-accordion-content>
-              <div class="settings__inner">
-                <div class="settings__row"> <label class="checkbox">
-		<input type="checkbox" class="checkbox__input">
-		<span class="checkbox__icon">
-			
-	<svg class="icon icon-check checkbox__icon-in"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
-
-		</span>
-		<span class="label checkbox__text">Send alert</span>
-	</label> </div>
-                <div class="settings__row">
-                  <div class="form-group">
-                    <div class="label form-group__label">When:</div>
-                    <div class="form-group__field">
-                      <div class="form-group__description">Cash register is closed and variance is more than $</div>
-                      <div class="form-group__control form-group__control_inline"> <input type="text" class="input form-group__input_center" value="10 000"> </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="settings__table">
-                  <div class="settings__thead">
-                    <div class="settings__tr">
-                      <div class="label settings__td settings__td_lg">To:</div>
-                      <div class="label settings__td settings__td_sm">via channel:</div>
-                    </div>
-                  </div>
-                  <div class="settings__tbody">
-                    <div class="settings__tr">
-                      <div class="settings__td settings__td_lg"> <select class="select">
-							    			<option value="Store manager">Store manager</option>
-							    			<option value="Store manager 1">Store manager 1</option>
-							    		</select> </div>
-                      <div class="settings__td settings__td_sm"> <select class="select">
-							    			<option value="SMS">SMS</option>
-							    			<option value="SMS 1">SMS 1</option>
-							    		</select> </div>
-                    </div>
-                    <div class="settings__tr">
-                      <div class="settings__td settings__td_lg"> <select class="select">
-							    			<option value="Store manager">Store manager</option>
-							    			<option value="Store manager 2">Store manager 2</option>
-							    		</select> </div>
-                      <div class="settings__td settings__td_sm"> <select class="select">
-							    			<option value="SMS">SMS</option>
-							    			<option value="SMS 2">SMS 2</option>
-							    		</select> </div> <button class="btn-remove settings__remove"><span></span></button> </div>
-                  </div>
-                  <div class="settings__tfoot">
-                    <div class="settings__tr">
-                      <div class="settings__td"> <button class="btn btn_plus"></button> </div>
+                      <div class="settings__td"> <button class="btn btn_plus settings__add"></button> </div>
                     </div>
                   </div>
                 </div>
