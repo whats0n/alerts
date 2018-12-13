@@ -1,0 +1,24 @@
+---
+title: Modals
+theme: 'is-boost'
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	{% set modals = [
+		{ target: 'modal-info', file: 'info' },
+		{ target: 'modal-error', file: 'error' },
+		{ target: 'save-changes', file: 'save-changes' }
+	] %}
+	<ul>
+		{% for item in modals %}
+			<li>
+				<a href="#" data-modal-control="{{item.target}}">{{item.target}}</a>
+			</li>
+		{% endfor %}
+	</ul>
+
+	{% for item in modals %}
+		{% include 'partials/modals/_' + item.file + '.html' %}
+	{% endfor %}
+{% endblock %}

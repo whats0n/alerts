@@ -6,6 +6,8 @@
 	text-align: center
 	+metro
 		background: $metroPrimary
+	+boost
+		background: $elevateSecondary
 	&__help
 		right: 0
 		+vertical
@@ -28,11 +30,15 @@
 			background: darken($blue, 10%)
 		+hover('metro')
 			background: $metroPrimary
+		+hover('boost')
+			background: $elevateSecondary
 		&:active
 			background: darken($blue, 10%)
 			box-shadow: inset 2px 2px 6px rgba(0,0,0,.2)
 			+metro
 				background: $metroPrimary
+			+boost
+				background: $elevateSecondary
 	&__back
 		left: 0
 		+vertical

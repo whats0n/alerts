@@ -11,3 +11,10 @@
 		<span class="label checkbox__text">{{props.text}}</span>
 	</label>
 {% endmacro %}
+
+{% macro switcher(props) %}
+	<label class="awesome-switcher {{props.classList}}">
+		<input {{props.attrs | safe}} type="checkbox" class="awesome-switcher__input">
+		<span class="awesome-switcher__control"></span>
+	</label>
+{% endmacro %}

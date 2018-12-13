@@ -1,32 +1,19 @@
 .settings
 	padding: 40px 20px
 	margin: 0 auto
-	max-width: 800px
+	max-width: 680px
 	+xs
-		padding: 15px
-	&__section
-		border-radius: 3px
-		box-shadow: 0 2px 5px 1px rgba($darkGray, 0.1)
-		&:not(:last-child)
-			margin-bottom: 20px
+		padding: 30px 20px
 	&__header
-		padding: 30px
+		padding-bottom: 30px
 		transition: color 0.25s
-		+xs
-			padding: 20px 15px
-		&.is-active
-			.settings__arrow
-				transform: rotate(180deg)
-		+hover
-			color: $blue
-		+hover('metro')
-			color: $metroSecondary
 	&__title
 		position: relative
-		padding-right: 1.5em
 		+f(24px, 700, 1)
 		+xs
 			+f(20px)
+		+xxs
+			text-align: center
 	&__arrow
 		position: absolute
 		top: 50%
@@ -35,30 +22,58 @@
 		fill: currentColor
 		font-size: 0.5em
 		transition: transform 0.25s
-	&__inner
-		padding: 30px
-		border-top: 1px solid rgba($black, 0.1)
-		+xs
-			padding: 15px
 	&__row
 		&:not(:last-child)
 			margin-bottom: 30px
 	&__table
 		margin: -8px
+		+xxs
+			padding: 0 20px
+			margin: 0 -20px 30px
+			border-top: 1px solid #ccc
+			border-bottom: 1px solid #ccc
+	&__thead
+		+xxs
+			display: none
+	&__tbody
+		.settings
+			&__tr
+				&:not(:last-child)
+					+xxs
+						border-bottom: 1px solid #ccc
 	&__tr
 		position: relative
 		display: flex
 		padding-right: 40px
+		+xxs
+			flex-direction: column
+			padding: 13px 0 15px 0
 	&__td
 		padding: 8px
 		flex-grow: 1
 		flex-shrink: 1
+		+xxs
+			padding: 8px 0
 		&_lg
 			flex-basis: 60%
 		&_sm
 			flex-basis: 40%
+		&-label
+			display: none
+			margin-bottom: 8px
+			+xxs
+				display: block
 	&__tfoot
 		padding-top: 10px
+		+xxs
+			padding-top: 10px
+			padding-bottom: 30px
+		.settings
+			&__tr,
+			&__td
+				+xxs
+					padding-top: 0
+					padding-bottom: 0
 	&__remove
 		position: absolute
 		top: 50%
@@ -67,6 +82,10 @@
 		width: 40px
 		height: 40px
 		background: none
+		+xxs
+			top: 5px
+			right: 0
+			margin: 0
 		span
 			position: absolute
 			top: 50%
@@ -93,3 +112,12 @@
 			padding: 10px
 			width: 100%
 			max-width: 140px
+			+xxs
+				width: 50%
+				max-width: none
+			.btn
+				+xxs
+					width: 100%
+	&__add
+		+xxs
+			width: 100%

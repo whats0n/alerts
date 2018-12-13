@@ -18,6 +18,8 @@
 			border-color: $blue
 			+metro 
 				border-color: $metroSecondary
+			+boost
+				border-color: $elevatePrimary
 	&:disabled,
 	&[readonly]
 		border-color: lighten($darkGray, 50%)
@@ -25,3 +27,7 @@
 		cursor: not-allowed
 	&.is-error
 		border-color: $red
+		+metro 
+			border-color: $red
+		+boost
+			border-color: $red

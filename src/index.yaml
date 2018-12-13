@@ -2,4 +2,11 @@ ProjectTitle: alerts
 
 PageList:
 - file: page.html
+- file: modals.html
+- file: loader.html
+
 - file: page-metro.html
+- file: modals-metro.html
+
+- file: page-boost.html
+- file: modals-boost.html

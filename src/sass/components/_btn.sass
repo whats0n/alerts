@@ -18,12 +18,16 @@
 	transition: opacity .175s, background .175s, box-shadow .175s
 	+metro
 		background: $metroSecondary
+	+boost
+		background: $elevatePrimary
 	&:active
 		color: $white
 		background: darken($blue, 10%)
 		box-shadow: inset 2px 2px 6px rgba(0,0,0,.2)
 		+metro
 			background: darken($metroSecondary, 10%)
+		+boost
+			background: darken($elevatePrimary, 10%)
 	&:disabled,
 	&.is-disabled
 		opacity: 0.7
@@ -31,6 +35,8 @@
 	&_gray
 		background: #bec1cb
 		+metro
+			background: #bec1cb
+		+boost
 			background: #bec1cb
 		&:active
 			background: darken(#bec1cb, 10%)
