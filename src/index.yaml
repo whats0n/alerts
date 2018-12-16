@@ -10,7 +10,9 @@ PageList:
 - file: page-metro.html
 - file: modals-metro.html
 - file: messages-metro.html
+- file: settings-multiple-metro.html
 
 - file: page-boost.html
 - file: modals-boost.html
 - file: messages-boost.html
+- file: settings-multiple-boost.html
