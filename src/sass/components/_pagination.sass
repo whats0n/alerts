@@ -1,0 +1,60 @@
+.pagination
+	font-size: 0
+	text-align: center
+	&__prev,
+	&__next,
+	&__list,
+	&__item,
+	&__link
+		display: inline-block
+		vertical-align: top
+	&__list
+		padding-left: 10px
+		padding-right: 10px
+	&__prev,
+	&__next,
+	&__link
+		width: 40px
+		height: 40px
+		color: $blue
+		text-align: center
+	&__link
+		font-size: 16px
+		line-height: 40px
+		transition: color 0.25s
+		+hover
+			color: $darkGray
+		+hover('boost')
+			color: $elevatePrimary
+		+metro
+			color: $metroSecondary
+		+boost
+			color: $elevateSecondary
+	&__prev,
+	&__next
+		border: 1px solid $blue
+		border-radius: 3px
+		font-size: 0
+		line-height: 38px
+		transition: color 0.25s, background 0.25s
+		+hover
+			color: $white
+			background: $blue
+		+metro
+			border-color: $metroSecondary
+			color: $metroSecondary
+		+boost
+			border-color: $elevateSecondary
+			color: $elevateSecondary
+		+hover('metro')
+			background: $metroSecondary
+		+hover('boost')
+			background: $elevateSecondary
+		&-icon
+			vertical-align: middle
+			fill: currentColor
+			font-size: 16px
+	&__prev-icon
+		transform: translateX(-1px)
+	&__next-icon
+		transform: translateX(1px)

@@ -54,6 +54,10 @@
   @if $line-height != null
     line-height: $line-height
 
+=touch
+  body:not(.no-touch) &
+    @content
+
 =boost
   .is-boost &
     @content

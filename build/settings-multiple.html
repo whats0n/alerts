@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Alerting System Settings</title>
+    <title>Alerts Settings: Bulk Change</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -24,7 +24,7 @@
 
 	</button>
         <div class="header__inner">
-          <div class="header__title">Alerting System Settings</div>
+          <div class="header__title">Alerts Settings: Bulk Change</div>
         </div>
       </header>
       <!-- end header -->
@@ -33,7 +33,19 @@
         <div class="settings">
           <div class="settings__section">
             <div class="settings__header">
-              <div class="settings__title">Cash Register Variance</div>
+              <div class="form-group form-group_inline"> <label for="send-alert" class="label form-group__label">For 3 events:</label>
+                <div class="collapsable form-group__collapsable" data-accordion-item> <button class="btn btn_icon collapsable__control" data-accordion-control>
+	<svg class="icon icon-angle-down btn__icon"><use xlink:href="img/sprite.svg#icon-angle-down"></use></svg>
+</button>
+                  <div class="collapsable__container">
+                    <ul class="form-group__list" data-accordion-content>
+                      <li class="form-group__list-item">Cash Register Variance</li>
+                      <li class="form-group__list-item">Refund</li>
+                      <li class="form-group__list-item">Void</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="settings__body">
               <div class="settings__inner">
@@ -42,15 +54,6 @@
 		<input id="send-alert" type="checkbox" class="awesome-switcher__input">
 		<span class="awesome-switcher__control"></span>
 	</label> </div>
-                </div>
-                <div class="settings__row">
-                  <div class="form-group">
-                    <div class="label form-group__label">When:</div>
-                    <div class="form-group__field">
-                      <div class="form-group__description">Cash register is closed and variance is&nbsp;more&nbsp;than&nbsp;$</div>
-                      <div class="form-group__control form-group__control_inline"> <input type="text" class="input form-group__input_center" value="10 000"> </div>
-                    </div>
-                  </div>
                 </div>
                 <div class="settings__table">
                   <div class="settings__thead">

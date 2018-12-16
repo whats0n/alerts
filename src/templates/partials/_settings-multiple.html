@@ -1,0 +1,85 @@
+<!-- begin settings -->
+<div class="settings">
+	<div class="settings__section">
+		<div class="settings__header">
+			<div class="form-group form-group_inline">
+				<label for="send-alert" class="label form-group__label">For 3 events:</label>
+				<div class="collapsable form-group__collapsable" data-accordion-item>
+					<button class="btn btn_icon collapsable__control" data-accordion-control>{{mixins.icon('angle-down', 'btn__icon')}}</button>
+					<div class="collapsable__container">
+						<ul class="form-group__list" data-accordion-content>
+							{% for item in [
+								'Cash Register Variance',
+								'Refund',
+								'Void'
+							] %}
+								<li class="form-group__list-item">{{item}}</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="settings__body">
+			<div class="settings__inner">
+				<div class="settings__row">
+					<div class="form-group form-group_inline">
+						<label for="send-alert" class="label form-group__label">Send alert</label>
+						{{mixins.switcher({
+							attrs: 'id="send-alert"',
+							classList: 'form-group__switcher'
+						})}}
+					</div>
+				</div>
+				<div class="settings__table">
+					<div class="settings__thead">
+						<div class="settings__tr">
+							<div class="label settings__td settings__td_lg">To:</div>
+							<div class="label settings__td settings__td_sm">via channel:</div>
+						</div>
+					</div>
+					<div class="settings__tbody">
+						{% for item in range(0,2) %}
+						    <div class="settings__tr">
+						    	<div class="settings__td settings__td_lg">
+						    		<div class="label settings__td-label">To:</div>
+						    		<select class="select {% if loop.index != 1 %}is-error{% endif %}">
+						    			<option value="Store manager">Store manager</option>
+						    			<option value="Administrator">Administrator</option>
+						    		</select>
+						    		<div class="error-message {% if loop.index == 1 %}is-hidden{% endif %}">Please select role to whom alert must be sent</div>
+						    	</div>
+						    	<div class="settings__td settings__td_sm">
+						    		<div class="label settings__td-label">via channel:</div>
+						    		<select class="select">
+						    			<option value="SMS">SMS</option>
+						    			<option value="E-mail">E-mail</option>
+						    		</select>
+						    	</div>
+						    	{% if loop.index > 1 %}
+										<button class="btn-remove settings__remove"><span></span></button>
+						    	{% endif %}
+						    </div>
+						{% endfor %}
+					</div>
+					<div class="settings__tfoot">
+						<div class="settings__tr">
+							<div class="settings__td">
+								<button class="btn btn_plus settings__add"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="settings__footer">
+					<div class="settings__footer-btn">
+						<button class="btn btn_primary">Save</button>
+					</div>
+					<div class="settings__footer-btn">
+						<button class="btn btn_gray">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end settings -->

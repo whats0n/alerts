@@ -1,0 +1,87 @@
+<!-- begin messages -->
+<div class="messages">
+	<div class="messages__inner">
+		<div class="messages__header">
+			<select class="select messages__select">
+				{% for item in range(0,5) %}
+					<option value="All Alerts {{loop.index}}">All Alerts {{loop.index}}</option>
+				{% endfor %}
+			</select>
+			<button class="btn btn_sm messages__btn" disabled>Bulk change</button>
+		</div>
+		<div class="messages__body">
+			<div class="grid">
+				<div class="grid__header">
+					<div class="grid__header-row">
+						<div class="grid__column grid__column_checkbox">
+							{{mixins.checkbox()}}
+						</div>
+						<div class="grid__column grid__column_message label">Alert</div>
+						<div class="grid__column grid__column_send label">Send</div>
+						<div class="grid__column grid__column_to label">To</div>
+						<div class="grid__column grid__column_channel label">Channel</div>
+						<div class="grid__column grid__column_edit"></div>
+					</div>
+				</div>
+				<div class="grid__body">
+					{% for item in [
+						{
+							message: 'Cash register variance',
+							to: 'Store manager <br>Manager 3',
+							channel: 'SMS'
+						},
+						{ message: 'Cash pickup needed' },
+						{ message: 'Cash pickup done' },
+						{
+							message: 'Return',
+							to: 'Store manager',
+							channel: 'E-mail <br>SMS'
+						},
+						{ message: 'Void' },
+						{ message: 'Inventory count results' },
+						{ message: 'Store transfer sent' },
+						{ message: 'Store transfer Not Received' },
+						{ message: 'Low Stock' }
+					] %}
+						<div class="grid__row">
+							<div class="grid__column grid__column_checkbox">
+								{{mixins.checkbox()}}
+							</div>
+							<div class="grid__column grid__column_message">{{item.message}}</div>
+							<div class="grid__column grid__column_send">
+								{{mixins.checkbox()}}
+							</div>
+							<div class="grid__column grid__column_to">{{item.to | safe}}</div>
+							<div class="grid__column grid__column_channel">{{item.channel | safe}}</div>
+							<div class="grid__column grid__column_edit">
+								<button class="btn btn_icon grid__btn">
+									{{mixins.icon('edit', 'btn__edit-icon')}}
+								</button>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="pagination messages__pagination">
+				<a href="#" class="pagination__prev">{{mixins.icon('angle-left', 'pagination__prev-icon')}}</a>
+				<ul class="pagination__list">
+					{% for item in range(0,4) %}
+						<li class="pagination__item">
+							<a href="#" class="pagination__link">
+								{% if loop.last %}
+									22
+								{% elseif loop.index == 3 %}
+									...
+								{% else %}
+									{{loop.index}}
+								{% endif %}
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+				<a href="#" class="pagination__next">{{mixins.icon('angle-right', 'pagination__next-icon')}}</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end messages -->

@@ -1,0 +1,50 @@
+.grid
+	display: table
+	table-layout: fixed
+	border: 1px solid #ccc
+	width: 100%
+	&__header
+		display: table-header-group
+		background: #e6e6e6
+		.grid__column
+			vertical-align: middle
+	&__body
+		display: table-row-group
+		.grid__column
+			vertical-align: top
+			border-top: 1px solid #ccc
+	&__header-row,
+	&__row
+		display: table-row
+	&__row
+		cursor: pointer
+		+hover
+			.grid__btn
+				opacity: 1
+	&__column
+		display: table-cell
+		padding: 10px 5px
+		&_checkbox,
+		&_send,
+		&_edit
+			text-align: center
+		&_send
+			width: 50px
+		&_checkbox
+			padding-left: 10px
+			width: 45px
+		&_edit
+			padding-right: 10px
+			width: 45px
+		&_message
+			width: 35%
+		&_to
+			width: 30%
+		&_channel,
+		&_to
+			+r(660)
+				display: none
+	&__btn
+		opacity: 0
+		+touch
+			opacity: 1

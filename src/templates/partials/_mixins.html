@@ -8,7 +8,9 @@
 		<span class="checkbox__icon">
 			{{icon('check', 'checkbox__icon-in')}}
 		</span>
-		<span class="label checkbox__text">{{props.text}}</span>
+		{% if props.text %}
+			<span class="label checkbox__text">{{props.text}}</span>
+		{% endif %}
 	</label>
 {% endmacro %}
 
