@@ -18,18 +18,22 @@
 		display: table-row
 	&__row
 		cursor: pointer
+		font-size: 16px
 		+hover
 			.grid__btn
 				opacity: 1
+		&:nth-child(odd)
+			background: $lightGray
 	&__column
 		display: table-cell
 		padding: 10px 5px
 		&_checkbox,
-		&_send,
+		&_enabled,
 		&_edit
+			font-size: 0
 			text-align: center
-		&_send
-			width: 50px
+		&_enabled
+			width: 75px
 		&_checkbox
 			padding-left: 10px
 			width: 45px
@@ -48,3 +52,8 @@
 		opacity: 0
 		+touch
 			opacity: 1
+	&__icon
+		fill: #ccc
+		font-size: 22px
+		&_active
+			fill: $green

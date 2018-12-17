@@ -14,10 +14,10 @@
 				<div class="grid__header">
 					<div class="grid__header-row">
 						<div class="grid__column grid__column_checkbox">
-							{{mixins.checkbox()}}
+							{{mixins.checkbox({ classList: 'checkbox_sm' })}}
 						</div>
 						<div class="grid__column grid__column_message label">Alert</div>
-						<div class="grid__column grid__column_send label">Send</div>
+						<div class="grid__column grid__column_enabled label">Enabled</div>
 						<div class="grid__column grid__column_to label">To</div>
 						<div class="grid__column grid__column_channel label">Channel</div>
 						<div class="grid__column grid__column_edit"></div>
@@ -45,11 +45,15 @@
 					] %}
 						<div class="grid__row">
 							<div class="grid__column grid__column_checkbox">
-								{{mixins.checkbox()}}
+								{{mixins.checkbox({ classList: 'checkbox_sm' })}}
 							</div>
 							<div class="grid__column grid__column_message">{{item.message}}</div>
-							<div class="grid__column grid__column_send">
-								{{mixins.checkbox()}}
+							<div class="grid__column grid__column_enabled">
+								{% if loop.index % 3 == 1 %}
+									{{mixins.icon('notification', 'grid__icon grid__icon_active')}}
+								{% else %}
+									{{mixins.icon('notification', 'grid__icon')}}
+								{% endif %}
 							</div>
 							<div class="grid__column grid__column_to">{{item.to | safe}}</div>
 							<div class="grid__column grid__column_channel">{{item.channel | safe}}</div>
