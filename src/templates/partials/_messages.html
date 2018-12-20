@@ -22,6 +22,18 @@
 						<div class="grid__column grid__column_channel label">Channel</div>
 						<div class="grid__column grid__column_edit"></div>
 					</div>
+					<div class="grid__header-row">
+						<div class="grid__column grid__column_checkbox">
+							<button class="btn btn_icon grid__filter" data-modal-control="filters">
+								{{mixins.icon('filter', 'btn__filter-icon')}}
+							</button>
+						</div>
+						<div class="grid__column grid__column_message"></div>
+						<div class="grid__column grid__column_enabled"></div>
+						<div class="grid__column grid__column_to"></div>
+						<div class="grid__column grid__column_channel"></div>
+						<div class="grid__column grid__column_edit"></div>
+					</div>
 				</div>
 				<div class="grid__body">
 					{% for item in [
@@ -89,3 +101,20 @@
 	</div>
 </div>
 <!-- end messages -->
+
+<!-- begin filters -->
+<div class="filters" data-modal="filters">
+	<div class="filters__container">
+		{% for item in range(0,5) %}
+			<div class="filters__box">
+				<div class="label filters__label">Label:</div>
+				<select class="select">
+					{% for item in range(0,5) %}
+					  <option value="value-{{loop.index}}">value-{{loop.index}}</option>
+					{% endfor %}
+				</select>
+			</div>
+		{% endfor %}
+	</div>
+</div>
+<!-- end filters -->

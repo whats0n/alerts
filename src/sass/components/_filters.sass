@@ -1,0 +1,28 @@
+.filters
+	position: fixed
+	z-index: 1000
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	opacity: 0
+	visibility: hidden
+	background: rgba(51,51,51,.8)
+	transition: opacity 0.4s, visibility 0.4s
+	&.is-open
+		opacity: 1
+		visibility: visible
+		.filters__container
+			transform: translate(0)
+	&__container
+		overflow: auto
+		padding: 20px 20px
+		width: 300px
+		height: 100%
+		background: $white
+		transform: translateX(-100%)
+		transition: transform 0.3s
+	&__box
+		padding: 10px 0
+	&__label
+		margin-bottom: 8px

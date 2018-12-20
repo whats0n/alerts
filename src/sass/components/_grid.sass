@@ -8,11 +8,21 @@
 		background: #e6e6e6
 		.grid__column
 			vertical-align: middle
+			&_checkbox
+				font-size: 0
+		.grid__header-row
+			&:not(:first-child)
+				.grid__column
+					border-top: 1px solid #ccc
 	&__body
 		display: table-row-group
 		.grid__column
 			vertical-align: top
 			border-top: 1px solid #ccc
+			&_checkbox,
+			&_enabled,
+			&_edit
+				font-size: 0
 	&__header-row,
 	&__row
 		display: table-row
@@ -27,10 +37,8 @@
 	&__column
 		display: table-cell
 		padding: 10px 5px
-		&_checkbox,
 		&_enabled,
 		&_edit
-			font-size: 0
 			text-align: center
 		&_enabled
 			width: 75px
@@ -42,8 +50,10 @@
 			width: 45px
 		&_message
 			width: 35%
+			+r(660)
+				width: 80%
 		&_to
-			width: 30%
+			width: 24%
 		&_channel,
 		&_to
 			+r(660)
