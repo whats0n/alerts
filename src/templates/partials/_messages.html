@@ -7,47 +7,74 @@
 					<option value="All Alerts {{loop.index}}">All Alerts {{loop.index}}</option>
 				{% endfor %}
 			</select>
-			<button class="btn btn_sm messages__btn" disabled>Bulk change</button>
+			{% if not messagesSimple %}
+				<button class="btn btn_sm messages__btn" disabled>Bulk change</button>
+			{% endif %}
 		</div>
 		<div class="messages__body">
 			<div class="grid">
 				<div class="grid__header">
 					<div class="grid__header-row">
-						<div class="grid__column grid__column_checkbox">
-							{{mixins.checkbox({ classList: 'checkbox_sm' })}}
-						</div>
+						{% if not messagesSimple %}
+							<div class="grid__column grid__column_checkbox">
+								{{mixins.checkbox({ classList: 'checkbox_sm' })}}
+							</div>
+						{% endif %}
 						<div class="grid__column grid__column_message label">Alert</div>
 						<div class="grid__column grid__column_enabled label">Enabled</div>
-						<div class="grid__column grid__column_to label">To</div>
-						<div class="grid__column grid__column_channel label">Channel</div>
-						<div class="grid__column grid__column_edit"></div>
-					</div>
-					<div class="grid__header-row">
-						<div class="grid__column grid__column_checkbox">
-							<button class="btn btn_icon grid__filter" data-modal-control="filters">
-								{{mixins.icon('filter', 'btn__filter-icon')}}
-							</button>
+						<div class="grid__column grid__column_to-channel">
+							<div class="grid__inner">
+								<div class="grid__inner-table">
+									<div class="grid__inner-row">
+										<div class="grid__inner-column grid__inner-column_to label">To</div>
+										<div class="grid__inner-column grid__inner-column_channel label">Channel</div>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="grid__column grid__column_message"></div>
-						<div class="grid__column grid__column_enabled"></div>
-						<div class="grid__column grid__column_to"></div>
-						<div class="grid__column grid__column_channel"></div>
 						<div class="grid__column grid__column_edit"></div>
 					</div>
+					{% if not messagesSimple %}
+						<div class="grid__header-row">
+							<div class="grid__column grid__column_checkbox">
+								<button class="btn btn_icon grid__filter" data-modal-control="filters">
+									{{mixins.icon('filter', 'btn__filter-icon')}}
+								</button>
+							</div>
+							<div class="grid__column grid__column_message"></div>
+							<div class="grid__column grid__column_enabled"></div>
+							<div class="grid__column grid__column_to-channel"></div>
+							<div class="grid__column grid__column_edit"></div>
+						</div>
+					{% endif %}
 				</div>
 				<div class="grid__body">
 					{% for item in [
 						{
 							message: 'Cash register variance',
-							to: 'Store manager <br>Manager 3',
-							channel: 'SMS'
+							toChannel: [
+								{
+									to: 'Store manager',
+									channel: 'SMS'
+								},
+								{
+									to: 'Manager 3'
+								}
+							]
 						},
 						{ message: 'Cash pickup needed' },
 						{ message: 'Cash pickup done' },
 						{
 							message: 'Return',
-							to: 'Store manager',
-							channel: 'E-mail <br>SMS'
+							toChannel: [
+								{
+									to: 'Store manager',
+									channel: 'E-mail'
+								},
+								{
+									channel: 'SMS'
+								}
+							]
 						},
 						{ message: 'Void' },
 						{ message: 'Inventory count results' },
@@ -56,9 +83,11 @@
 						{ message: 'Low Stock' }
 					] %}
 						<div class="grid__row">
-							<div class="grid__column grid__column_checkbox">
-								{{mixins.checkbox({ classList: 'checkbox_sm' })}}
-							</div>
+							{% if not messagesSimple %}
+								<div class="grid__column grid__column_checkbox">
+									{{mixins.checkbox({ classList: 'checkbox_sm' })}}
+								</div>
+							{% endif %}
 							<div class="grid__column grid__column_message">{{item.message}}</div>
 							<div class="grid__column grid__column_enabled">
 								{% if loop.index % 3 == 1 %}
@@ -67,8 +96,18 @@
 									{{mixins.icon('notification', 'grid__icon')}}
 								{% endif %}
 							</div>
-							<div class="grid__column grid__column_to">{{item.to | safe}}</div>
-							<div class="grid__column grid__column_channel">{{item.channel | safe}}</div>
+							<div class="grid__column grid__column_to-channel">
+								<div class="grid__inner">
+									<div class="grid__inner-table">
+										{% for item in item.toChannel %}
+											<div class="grid__inner-row">
+												<div class="grid__inner-column grid__inner-column_to">{{item.to | safe}}</div>
+												<div class="grid__inner-column grid__inner-column_channel">{{item.channel | safe}}</div>
+											</div>
+										{% endfor %}
+									</div>
+								</div>
+							</div>
 							<div class="grid__column grid__column_edit">
 								<button class="btn btn_icon grid__btn">
 									{{mixins.icon('edit', 'btn__edit-icon')}}
@@ -78,43 +117,46 @@
 					{% endfor %}
 				</div>
 			</div>
-			<div class="pagination messages__pagination">
-				<a href="#" class="pagination__prev">{{mixins.icon('angle-left', 'pagination__prev-icon')}}</a>
-				<ul class="pagination__list">
-					{% for item in range(0,4) %}
-						<li class="pagination__item">
-							<a href="#" class="pagination__link">
-								{% if loop.last %}
-									22
-								{% elseif loop.index == 3 %}
-									...
-								{% else %}
-									{{loop.index}}
-								{% endif %}
-							</a>
-						</li>
-					{% endfor %}
-				</ul>
-				<a href="#" class="pagination__next">{{mixins.icon('angle-right', 'pagination__next-icon')}}</a>
-			</div>
+			{% if not messagesSimple %}
+				<div class="pagination messages__pagination">
+					<a href="#" class="pagination__prev">{{mixins.icon('angle-left', 'pagination__prev-icon')}}</a>
+					<ul class="pagination__list">
+						{% for item in range(0,4) %}
+							<li class="pagination__item">
+								<a href="#" class="pagination__link">
+									{% if loop.last %}
+										22
+									{% elseif loop.index == 3 %}
+										...
+									{% else %}
+										{{loop.index}}
+									{% endif %}
+								</a>
+							</li>
+						{% endfor %}
+					</ul>
+					<a href="#" class="pagination__next">{{mixins.icon('angle-right', 'pagination__next-icon')}}</a>
+				</div>
+			{% endif %}
 		</div>
 	</div>
 </div>
 <!-- end messages -->
-
-<!-- begin filters -->
-<div class="filters" data-modal="filters">
-	<div class="filters__container" data-modal-container>
-		{% for item in range(0,5) %}
-			<div class="filters__box">
-				<div class="label filters__label">Label:</div>
-				<select class="select">
-					{% for item in range(0,5) %}
-					  <option value="value-{{loop.index}}">value-{{loop.index}}</option>
-					{% endfor %}
-				</select>
-			</div>
-		{% endfor %}
+{% if not messagesSimple %}
+	<!-- begin filters -->
+	<div class="filters" data-modal="filters">
+		<div class="filters__container" data-modal-container>
+			{% for item in range(0,5) %}
+				<div class="filters__box">
+					<div class="label filters__label">Label:</div>
+					<select class="select">
+						{% for item in range(0,5) %}
+						  <option value="value-{{loop.index}}">value-{{loop.index}}</option>
+						{% endfor %}
+					</select>
+				</div>
+			{% endfor %}
+		</div>
 	</div>
-</div>
-<!-- end filters -->
+	<!-- end filters -->
+{% endif %}
