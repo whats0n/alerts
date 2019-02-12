@@ -7,6 +7,9 @@ PageList:
 - file: messages.html
 - file: messages-simple.html
 - file: settings-multiple.html
+- file: store-transfer-out.html
+- file: inventory-count-results.html
+- file: unsubscribe.html
 
 - file: page-metro.html
 - file: modals-metro.html

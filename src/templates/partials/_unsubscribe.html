@@ -1,0 +1,31 @@
+<!-- begin section -->
+<div class="section">
+	<div class="unsubscribe">
+		<div class="unsubscribe__box">
+			<div class="unsubscribe__title">Dear Customer,</div>
+			<div class="unsubscribe__description">
+				<p>You are subscribed to get B2B Soft alerts to <strong>mymail@b2bsoft.com</strong> as employee of <strong>Best Wireless</strong>.</p>
+				<p>If you choose to unsubscribe you will not receive any alerts from B2B Soft.</p>
+				<p>If you still want to receive alerts from B2B Soft but exclude some of them, please to your Manager to change Alerts settings for your company.</p>
+			</div>
+		</div>
+		<div class="unsubscribe__box">
+			<div class="unsubscribe__subtitle">Please select the option below:</div>
+			<ul class="unsubscribe__list">
+				{% for item in [
+					{ name: 'reason', text: 'I am not employee of Best Wireless. Remove me from your email list.' },
+					{ name: 'reason', text: 'I am employee of Best Wireless. Remove me from your email list.' },
+					{ name: 'reason', text: "I've changed my mind! Keep me in list of subscribers", attrs: 'checked' }
+				] %}
+					<li class="unsubscribe__item">
+						{{mixins.radio(item)}}
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="unsubscribe__footer">
+			<button class="btn">Submit</button>
+		</div>
+	</div>
+</div>
+<!-- end section -->

@@ -1,0 +1,83 @@
+<!-- begin section -->
+<div class="section">
+	<ul class="info-list">
+		{% for item in [
+			{
+				label: 'From:',
+				value: 'NY Store'
+			},
+			{
+				label: 'To:',
+				value: 'Main Store'
+			},
+			{
+				label: 'User:',
+				value: 'john123'
+			},
+			{
+				label: 'Date:',
+				value: '12/24/2018'
+			},
+			{
+				label: 'Time:',
+				value: '04:45 PM'
+			},
+			{
+				label: 'Doc#:',
+				value: '145646'
+			},
+			{
+				label: 'Qty:',
+				value: '3'
+			}
+		] %}
+			<li class="info-list__item">
+				<div class="info-list__label">{{item.label}}</div>
+				<div class="info-list__value">{{item.value}}</div>
+			</li>
+		{% endfor %}
+	</ul>
+	<div class="box">
+		<div class="title-md box__title">List of items</div>
+		<div class="table">
+			<div class="table__header">
+				<div class="table__row">
+					<div class="table__col">UPC</div>
+					<div class="table__col">Product name</div>
+					<div class="table__col">Qty</div>
+					<div class="table__col">Serial#</div>
+				</div>
+			</div>
+			<div class="table__body">
+				{% for item in [
+					{
+						upc: '4546757464333',
+						productName: 'iPhone 5s silver',
+						qty: '1',
+						serial: '687698769898798'
+					},
+					{
+						upc: '4546757464333',
+						productName: 'iPhone 5s silver',
+						qty: '1',
+						serial: '687698769898798'
+					},
+					{
+						upc: '4546757464333',
+						productName: 'iPhone 5s silver',
+						qty: '1',
+						serial: '687698769898798'
+					}
+				] %}
+					<div class="table__row">
+						<div class="table__col">{{item.upc}}</div>
+						<div class="table__col">{{item.productName}}</div>
+						<div class="table__col">{{item.qty}}</div>
+						<div class="table__col">{{item.serial}}</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>	
+</div>
+<!-- end section -->

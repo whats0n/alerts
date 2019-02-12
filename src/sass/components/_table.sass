@@ -1,0 +1,24 @@
+.table
+	display: table
+	table-layout: fixed
+	border: 1px solid #dcdcdc
+	border-collapse: collapse
+	border-spacing: 0
+	width: 100%
+	font-size: 14px
+	line-height: 1.2
+	word-break: break-word
+	&__header
+		display: table-header-group
+		background: #eaeaea
+	&__body
+		display: table-row-group
+		.table__col
+			border: 1px solid #dcdcdc
+	&__row
+		display: table-row
+	&__col
+		display: table-cell
+		vertical-align: middle
+		padding: 10px
+		width: 25%

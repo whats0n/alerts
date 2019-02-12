@@ -4,7 +4,7 @@
 
 {% macro checkbox(props) %}
 	<label class="checkbox {{props.classList}}">
-		<input type="checkbox" class="checkbox__input">
+		<input type="checkbox" class="checkbox__input" {{props.attrs | safe}}>
 		<span class="checkbox__icon">
 			{{icon('check', 'checkbox__icon-in')}}
 		</span>
@@ -20,3 +20,13 @@
 		<span class="awesome-switcher__control"></span>
 	</label>
 {% endmacro %}
+
+{% macro radio(props) %}
+<label class="radio">
+	<input type="radio" name="{{props.name}}" {{props.attrs | safe}}>
+	<span class="radio__icon"></span>
+	{% if props.text %}
+		<span class="label radio__text">{{props.text}}</span>
+	{% endif %}
+</label>
+{% endmacro	 %}
