@@ -10,6 +10,9 @@
 			{% if not messagesSimple %}
 				<button class="btn btn_sm messages__btn" disabled>Bulk change</button>
 			{% endif %}
+			{% if removeFromStopList %}
+				<button class="btn btn_sm messages__btn">Remove from Stop List</button>
+			{% endif %}
 		</div>
 		<div class="messages__body">
 			<div class="grid">

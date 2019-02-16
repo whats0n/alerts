@@ -1,0 +1,57 @@
+<div class="section">
+	<!-- begin search-box -->
+	<div class="search-box">
+		<label class="label search-box__label" for="search-box">Lookup in Stop list by:</label>
+		<div class="search-box__container">
+			<div class="search-box__field">
+				<input type="text" class="input" placeholder="Enter e-mail or mobile # or username" if="search-box">
+			</div>
+			<div class="search-box__control">
+				<button class="btn btn_sm">Find</button>
+			</div>
+		</div>
+	</div>
+	<!-- end search-box -->
+	{% if searchResults %}
+		<div class="search-results">
+			<div class="search-results__title">Result:</div>
+			<div class="search-results__list">
+				<div class="search-results__item">
+					<div class="search-results__row">
+						{% for item in [
+							[
+								{ label: 'User:', value: 'john' },
+								{ label: 'Name:', value: 'John DOe' }
+							],
+							[
+								{ label: 'E-mail:', value: 'atest@b2bsoft.com' },
+								{ label: 'Mobile number:', value: '(123) 445 7766' },
+								{ label: 'Was added:', value: '1/23/2018 12:30:46 PM' },
+								{ label: 'Reason:', value: 'Not an employee' }
+							]
+						] %}
+							<div class="search-results__col">
+								{% for item in item %}
+									<div class="search-results__fieldset">
+										<div class="label search-results__label">{{item.label}}</div>
+										<div class="search-results__field">
+											<input type="text" class="input" value="{{item.value}}">
+										</div>
+									</div>
+								{% endfor %}
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			<div class="search-results__footer">
+				<button class="btn btn_sm search-results__btn">Remove from Stop List</button>
+			</div>
+		</div>
+	{% elseif searchResultsEmpty %}
+		<div class="search-results">
+			<div class="search-results__title">Result:</div>
+			<div class="search-results__empty">E-mail is not found in Stop list</div>
+		</div>
+	{% endif %}
+</div>

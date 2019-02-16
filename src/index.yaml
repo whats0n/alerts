@@ -10,6 +10,9 @@ PageList:
 - file: store-transfer-out.html
 - file: inventory-count-results.html
 - file: unsubscribe.html
+- file: search.html
+- file: search-result.html
+- file: search-empty.html
 
 - file: page-metro.html
 - file: modals-metro.html
