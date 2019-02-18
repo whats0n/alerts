@@ -27,10 +27,24 @@
 					</div>
 				</div>
 				<div class="settings__row">
-					{{mixins.checkbox({ text: 'Only if Card refund' })}}
+					<div class="form-group form-group_inline">
+						<label for="send-alert" class="label label_simple form-group__label form-group__label_static">All refund types</label>
+						{{mixins.switcher({
+							attrs: 'id="send-alert"',
+							classList: 'form-group__switcher',
+							text: 'Only Card refund'
+						})}}
+					</div>
 				</div>
 				<div class="settings__row">
-					{{mixins.checkbox({ text: 'Only if Device refund' })}}
+					<div class="form-group form-group_inline">
+						<label for="send-alert" class="label label_simple form-group__label form-group__label_static">All Products</label>
+						{{mixins.switcher({
+							attrs: 'id="send-alert"',
+							classList: 'form-group__switcher',
+							text: 'Only Device return'
+						})}}
+					</div>
 				</div>
 				<div class="settings__table">
 					<div class="settings__thead">

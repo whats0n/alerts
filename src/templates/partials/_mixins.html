@@ -18,6 +18,9 @@
 	<label class="awesome-switcher {{props.classList}}">
 		<input {{props.attrs | safe}} type="checkbox" class="awesome-switcher__input">
 		<span class="awesome-switcher__control"></span>
+		{% if props.text %}
+			<span class="label label_simple awesome-switcher__text">{{props.text}}</span>
+		{% endif %}
 	</label>
 {% endmacro %}
 
