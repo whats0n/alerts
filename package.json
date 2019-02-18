@@ -58,7 +58,7 @@
     "webpack-glsl-loader": "^1.0.1",
     "require-yaml": "^0.0.1",
     "lodash": "^4.3.0",
-    "gulp": "^4.0.0",
+    "gulp": "^3.9.0",
     "svg4everybody": "^2.1.9"
   }
 }
