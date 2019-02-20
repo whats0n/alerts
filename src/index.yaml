@@ -13,6 +13,7 @@ PageList:
 - file: search.html
 - file: search-result.html
 - file: search-empty.html
+- file: refund.html
 
 - file: page-metro.html
 - file: modals-metro.html

@@ -1,0 +1,98 @@
+<!-- begin section -->
+<div class="section">
+  <ul class="info-list">
+    {% for item in [
+      {
+        label: 'Store:',
+        value: 'Main Store'
+      },
+      {
+        label: 'Register:',
+        value: '3'
+      },
+      {
+        label: 'User:',
+        value: 'john123'
+      },
+      {
+        label: 'Date:',
+        value: '12/24/2018'
+      },
+      {
+        label: 'Time:',
+        value: '04:45 PM'
+      }
+    ] %}
+      <li class="info-list__item">
+        <div class="info-list__label">{{item.label}}</div>
+        <div class="info-list__value">{{item.value}}</div>
+      </li>
+    {% endfor %}
+  </ul>
+  {% for box in [
+    {
+      title: 'Items',
+      header: [
+        { text: 'Name', class: 'table__col_half' },
+        { text: 'Qty', class: 'table__col_one-fifth' },
+        { text: 'Price', class: 'table__col_third' }
+      ],
+      table: [
+        [
+          { text: 'iPhone 6 silver', class: 'table__col_half' },
+          { text: '1', class: 'table__col_one-fifth' },
+          { text: '$350.00', class: 'table__col_third' }
+        ],
+        [
+          { text: 'Case leather silver', class: 'table__col_half' },
+          { text: '1', class: 'table__col_one-fifth' },
+          { text: '$60.00', class: 'table__col_third' }
+        ]
+      ]
+    },
+    {
+      title: 'Refund amount',
+      header: [
+        { text: 'Type' },
+        { text: 'Amount' }
+      ],
+      table: [
+        [
+          { text: 'Cash' },
+          { text: '$300.00' }
+        ],
+        [
+          { text: 'Credit Card' },
+          { text: '$50.00' }
+        ],
+        [
+          { text: 'Debit Card' },
+          { text: '$60.00' }
+        ]
+      ]
+    }
+  ] %}
+    <div class="box">
+      <div class="title-md box__title">{{box.title}}</div>
+      <div class="table">
+        <div class="table__header">
+          <div class="table__row">
+            {% for col in box.header %}
+              <div class="table__col {{col.class}}">{{col.text}}</div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="table__body">
+          {% for row in box.table %}
+            <div class="table__row">
+              {% for col in row %}
+                <div class="table__col {{col.class}}">{{col.text}}</div>
+              {% endfor %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>  
+  {% endfor %}
+</div>
+<!-- end section -->
