@@ -28,26 +28,59 @@
 						</div>
 					</div>
 				</div>
-				<div class="settings__row">
-					<div class="form-group form-group_inline">
-						<label for="send-alert" class="label label_simple form-group__label form-group__label_static">All refund types</label>
-						{{mixins.switcher({
-							attrs: 'id="send-alert"',
-							classList: 'form-group__switcher',
-							text: 'Only Card refund'
-						})}}
+				{% if checkboxes %}
+					{% for item in [
+						{
+							title: 'Refund types (select all that apply):',
+							items: [
+								{ text: 'Cash' },
+								{ text: 'Credit/Debit card' },
+								{ text: 'All other' }
+							]
+						},
+						{
+							title: 'Product types (select all that apply):',
+							items: [
+								{ text: 'Devices' },
+								{ text: 'All other' }
+							]
+						}
+					] %}
+						<div class="settings__row">
+							<div class="form-group form-group_inline form-group_checkboxes">
+								<label for="send-alert" class="label label_simple form-group__label form-group__label_static">{{item.title}}</label>
+								<ul class="form-group__list">
+									{% for item in item.items %}
+										<li class="form-group__list-item">
+											{{mixins.checkbox(item)}}
+										</li>
+									{% endfor %}
+								</ul>
+							</div>
+						</div>
+					{% endfor %}
+				{% else %}
+					<div class="settings__row">
+						<div class="form-group form-group_inline">
+							<label for="send-alert" class="label label_simple form-group__label form-group__label_static">All refund types</label>
+							{{mixins.switcher({
+								attrs: 'id="send-alert"',
+								classList: 'form-group__switcher',
+								text: 'Only Card refund'
+							})}}
+						</div>
 					</div>
-				</div>
-				<div class="settings__row">
-					<div class="form-group form-group_inline">
-						<label for="send-alert" class="label label_simple form-group__label form-group__label_static">All Products</label>
-						{{mixins.switcher({
-							attrs: 'id="send-alert"',
-							classList: 'form-group__switcher',
-							text: 'Only Device return'
-						})}}
+					<div class="settings__row">
+						<div class="form-group form-group_inline">
+							<label for="send-alert" class="label label_simple form-group__label form-group__label_static">All Products</label>
+							{{mixins.switcher({
+								attrs: 'id="send-alert"',
+								classList: 'form-group__switcher',
+								text: 'Only Device return'
+							})}}
+						</div>
 					</div>
-				</div>
+				{% endif %}
 				<div class="settings__table">
 					<div class="settings__thead">
 						<div class="settings__tr">

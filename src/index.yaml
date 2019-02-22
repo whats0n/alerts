@@ -2,6 +2,7 @@ ProjectTitle: alerts
 
 PageList:
 - file: page.html
+- file: page-v2.html
 - file: modals.html
 - file: loader.html
 - file: messages.html
