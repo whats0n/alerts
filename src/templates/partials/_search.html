@@ -16,7 +16,7 @@
 		<div class="search-results">
 			<div class="search-results__title">Result:</div>
 			<div class="search-results__list">
-				<div class="search-results__item">
+				{# <div class="search-results__item">
 					<div class="search-results__row">
 						{% for item in [
 							[
@@ -42,7 +42,70 @@
 							</div>
 						{% endfor %}
 					</div>
-				</div>
+				</div> #}
+				{% for item in [
+					{
+						email: {
+							value: 'user@gmail.com',
+							added: '1/23/2018 12:30:46 PM',
+							reason: 'No longer an employee'
+						},
+						number: {
+							value: '(123) 445 7766',
+							added: '1/23/2018 12:30:46 PM',
+							reason: 'No longer an employee'
+						},
+						users: [
+							{
+								username: 'john',
+								fullName: 'John Doe',
+								status: 'Active'
+							},
+							{
+								username: 'mike',
+								fullName: 'Mike Tyson',
+								status: 'Active'
+							}
+						]
+					}
+				] %}
+					<div class="search-results__item">
+						<div class="search-result">
+							{% if item.email %}
+								<div class="search-result__section">
+									<div class="search-result__label">E-mail:</div>
+									<div class="search-result__value">{{item.email.value}}</div>
+									<ul class="search-result__meta">
+										<li class="search-result__meta-item">Was added {{item.email.added}}</li>
+										<li class="search-result__meta-item">Reason: {{item.email.reason}}</li>
+									</ul>
+								</div>
+							{% endif %}
+							{% if item.number %}
+								<div class="search-result__section">
+									<div class="search-result__label">Mobile number:</div>
+									<div class="search-result__value">{{item.number.value}}</div>
+									<ul class="search-result__meta">
+										<li class="search-result__meta-item">Was added {{item.number.added}}</li>
+										<li class="search-result__meta-item">Reason: {{item.number.reason}}</li>
+									</ul>
+								</div>
+							{% endif %}
+							<div class="search-result__list">
+								<div class="search-result__label">Users:</div>
+								<ul class="search-result__list-items">
+									{% for item in item.users %}
+										<li class="search-result__list-item">
+											<div class="search-result__list-title">Username: <strong>{{item.username}}</strong></div>
+											<div class="search-result__list-subtitle">Full Name: <strong>{{item.fullName}}</strong></div>
+											<div class="search-result__list-status">Status: <strong>{{item.status}}</strong></div>
+										</li>
+									{% endfor %}
+								</ul>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
 			</div>
 			<div class="search-results__footer">
 				<button class="btn btn_sm search-results__btn">Remove from Stop List</button>
