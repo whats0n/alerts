@@ -76,13 +76,14 @@
 						upc: '4546757464333',
 						productName: 'iPhone 5s silver',
 						qty: '1',
-						serial: '687698769898798'
+						serial: '687698769898798',
+						qtyClass: 'is-red'
 					}
 				] %}
 					<div class="table__row">
 						<div class="table__col">{{item.upc}}</div>
 						<div class="table__col">{{item.productName}}</div>
-						<div class="table__col">{{item.qty}}</div>
+						<div class="table__col {{item.qtyClass}}">{{item.qty}}</div>
 						<div class="table__col">{{item.serial}}</div>
 					</div>
 				{% endfor %}
