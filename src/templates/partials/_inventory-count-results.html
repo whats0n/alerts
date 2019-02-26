@@ -60,7 +60,7 @@
 				<div class="table__row">
 					<div class="table__col">UPC</div>
 					<div class="table__col">Product name</div>
-					<div class="table__col">Qty</div>
+					<div class="table__col table__col_qty">Qty</div>
 					<div class="table__col">Serial#</div>
 				</div>
 			</div>
@@ -83,7 +83,7 @@
 					<div class="table__row">
 						<div class="table__col">{{item.upc}}</div>
 						<div class="table__col">{{item.productName}}</div>
-						<div class="table__col {{item.qtyClass}}">{{item.qty}}</div>
+						<div class="table__col table__col_qty {{item.qtyClass}}">{{item.qty}}</div>
 						<div class="table__col">{{item.serial}}</div>
 					</div>
 				{% endfor %}
