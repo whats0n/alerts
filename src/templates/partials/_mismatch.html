@@ -1,0 +1,65 @@
+{{verify.call({
+	statusClass: 'is-red',
+	statusIcon: 'error-triangle',
+	statusAlt: 'Not Verified',
+	statusText: 'There has been a mismatch found with your Idoo Order',
+	items: [
+		{
+			title: 'Missing serials in your Wireless Standard:',
+			tables: [
+				{
+					thead: [ 'UPC: 610214655493', 'LG LMX210M ARISTO 2 TMUS KIT' ],
+					tbody: [
+						{
+							serials: [ '156757657659879789', '156757657659879789', '156757657659879789' ],
+							statusClass: 'is-red',
+							statusIcon: 'error-triangle',
+							statusText: 'Deficit'
+						}
+					]		
+				},
+				{
+					thead: [ 'UPC: 610214655493', 'LG LMX210M ARISTO 2 TMUS KIT' ],
+					tbody: [
+						{
+							serials: [ '156757657659879789', '156757657659879789' ],
+							statusIcon: 'partial-triangle',
+							statusText: 'Partial receiving'
+						}
+					]		
+				}
+			]
+		},
+		{
+			title: 'Missing serials in your Idoo order:',
+			tables: [
+				{
+					thead: [ 'UPC: 610214655493', 'LG LMX210M ARISTO 2 TMUS KIT' ],
+					tbody: [
+						{
+							serials: [ '156757657659879789' ],
+							statusClass: 'is-red',
+							statusIcon: 'error-triangle',
+							statusText: 'Overstock'
+						}
+					]		
+				}
+			]
+		},
+		{
+			title: 'Matched serials:',
+			tables: [
+				{
+					thead: [ 'UPC: 610214655493', 'LG LMX210M ARISTO 2 TMUS KIT' ],
+					tbody: [
+						{
+							serials: [ '156757657659879789', '156757657659879789', '156757657659879789' ],
+							statusClass: 'is-red',
+							statusText: 'Deficit'
+						}
+					]		
+				}
+			]
+		}
+	]
+})}}

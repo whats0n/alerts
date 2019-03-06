@@ -16,6 +16,10 @@ PageList:
 - file: search-empty.html
 - file: refund.html
 
+- file: matched.html
+- file: mismatch.html
+- file: match-error.html
+
 - file: page-metro.html
 - file: modals-metro.html
 - file: messages-metro.html

@@ -1,0 +1,99 @@
+.verify
+	color: $black
+	padding-bottom: 30px
+	&__header
+		padding: 20px 15px 10px
+		border-bottom: 1px solid #ccc
+	&__inner
+		margin-left: auto
+		margin-right: auto
+		max-width: 400px
+	&__meta
+		font-size: 16px
+		line-height: 1.4
+		&:not(:last-child)
+			margin-bottom: 15px
+	&__status
+		display: flex
+		align-items: center
+		&_sm
+			.verify
+				&__status
+					&-icon
+						margin-right: 7px
+						width: 18px
+					&-text
+						font-size: 12px
+						font-weight: 400
+						line-height: 20px
+		&-icon
+			flex: 0 0 auto
+			margin-right: 20px
+			width: 36px
+		&-text
+			flex: 1 1 auto
+			font-size: 18px
+			font-weight: 700
+			line-height: 1.2
+	&__description
+		padding: 15px 0 0 10px
+		font-size: 16px
+		line-height: 1.4
+	&__date
+		margin-top: 15px
+		font-size: 12px
+		line-height: 1.4
+	&__body
+		padding: 15px 15px 5px
+	&__title
+		margin-bottom: 10px
+		font-size: 18px
+		font-weight: 700
+	&__list
+		padding-left: 10px
+		&-item
+			display: flex
+			align-items: flex-start
+			font-size: 16px
+			line-height: 1.4
+		&-label,
+		&-value
+			flex-grow: 1
+			flex-shrink: 1
+		&-label
+			flex-basis: 70%
+		&-value
+			flex-basis: 30%
+	&__items
+		padding-top: 15px
+	&__item
+		margin-top: 15px
+		&:not(:last-child)
+			.verify
+				&__table
+					border-bottom: 1px solid #ccc
+	&__table
+		padding: 0 10px 15px
+		margin-top: 15px
+	&__tr
+		display: flex
+		align-items: flex-start
+	&__th,
+	&__td
+		flex-grow: 1
+		flex-shrink: 1
+		font-size: 13px
+		line-height: 1.4
+		&:first-child
+			flex-basis: 55%
+		&:last-child
+			flex-basis: 45%
+	&__th
+		padding-bottom: 15px
+		font-weight: 700
+	&__td
+		word-wrap: break-word
+	&__subtitle
+		font-size: 13px
+		font-weight: 700
+		line-height: 1.4

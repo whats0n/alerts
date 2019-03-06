@@ -1,0 +1,81 @@
+{% macro call(props) %}
+<div class="verify">
+	<div class="verify__header">
+		<div class="verify__inner">
+			<div class="verify__meta">{{props.meta or 'Order # 1234 was verified with Idoo by Order Magic:'}}</div>
+			<div class="verify__status {{props.statusClass}}">
+				<img src="img/{{props.statusIcon or 'check-mark'}}.png" alt="{{props.statusAlt or 'Verified'}}" class="verify__status-icon">
+				<div class="verify__status-text">{{props.statusText or 'Fully Matched Order'}}</div>
+			</div>
+			{% if props.description %}
+				<div class="verify__description">
+					{% for item in props.description %}
+						<p>{{item | safe}}</p>
+					{% endfor %}
+				</div>
+			{% endif %}
+			<div class="verify__date">{{props.date or '07/27/2018 11:23:16 AM'}}</div>
+		</div>
+	</div>
+	<div class="verify__body">
+		<div class="verify__inner">
+			<div class="verify__main">
+				<div class="verify__title">Order Details:</div>
+				<ul class="verify__list">
+					{% for item in [
+						[ 'Idoo order:', '145678' ],
+						[ 'Idoo Reference:', 'GA125678' ],
+						[ 'Receiving # in WS:', '1324' ],
+						[ 'Store:', 'Main store' ],
+						[ 'Created by:', 'John12' ],
+						[ 'Total items:', '40' ],
+						[ 'Total amount:', '$7125.00' ]
+					] %}
+						<li class="verify__list-item">
+							<div class="verify__list-label">{{item[0]}}</div>
+							<div class="verify__list-value">{{item[1]}}</div>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="verify__items">
+				{% for item in props.items %}
+					<div class="verify__item">
+						<div class="verify__title">{{item.title}}</div>
+						{% for item in item.tables %}
+							<div class="verify__table">
+								<div class="verify__thead">
+									<div class="verify__tr">
+										<div class="verify__th">{{item.thead[0]}}</div>
+										<div class="verify__th">{{item.thead[1]}}</div>
+									</div>
+								</div>
+								<div class="verify__tbody">
+									{% for item in item.tbody %}
+										<div class="verify__tr">
+											<div class="verify__td">
+												<div class="verify__subtitle">Serials:</div>
+												{% for item in item.serials %}
+													<div>{{item}}</div>
+												{% endfor %}
+											</div>
+											<div class="verify__td">
+												<div class="verify__status verify__status_sm {{item.statusClass}}">
+													{% if item.statusIcon %}
+														<img src="img/{{item.statusIcon}}.png" alt="Icon for {{item.statusText}}" class="verify__status-icon">
+													{% endif %}
+													<div class="verify__status-text">{{item.statusText}}</div>
+												</div>
+											</div>
+										</div>
+									{% endfor %}
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+{% endmacro %}
