@@ -20,12 +20,20 @@ PageList:
 - file: mismatch.html
 - file: match-error.html
 
+- file: e-simple.html
+- file: e-error.html
+- file: e-empty.html
+- file: e-small.html
+- file: e-error-small.html
+
+# METRO
 - file: page-metro.html
 - file: modals-metro.html
 - file: messages-metro.html
 - file: messages-simple-metro.html
 - file: settings-multiple-metro.html
 
+# BOOST
 - file: page-boost.html
 - file: modals-boost.html
 - file: messages-boost.html

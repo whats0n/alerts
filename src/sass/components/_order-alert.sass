@@ -1,0 +1,112 @@
+.order-alert
+	margin: 0 auto
+	max-width: 600px
+	&__counter
+		padding: 30px 10px 20px
+		text-align: center
+		&-header
+			display: flex
+			align-items: flex-start
+		&-item
+			flex: 1 1 33.33%
+			&_red
+				.order-alert__counter-value
+					border-bottom-color: #cc0000
+			&_orange
+				.order-alert__counter-value
+					border-bottom-color: #ff6600
+			&_green
+				.order-alert__counter-value
+					border-bottom-color: #82cc78
+			&_gray
+				.order-alert__counter-value
+					border-bottom-color: #ccc
+					color: #999
+		&-title
+			margin-bottom: 15px
+			font-size: 14px
+			font-weight: 700
+		&-value
+			margin-left: auto
+			margin-right: auto
+			border-bottom: 10px solid transparent
+			width: 80px
+			color: black
+			font-size: 48px
+			font-weight: 700
+		&-description
+			padding-top: 20px
+			color: $blue
+			font-size: 18px
+			font-weight: 700
+	&__item
+		line-height: 1.3
+		&-header
+			position: relative
+			padding: 15px 15px 15px 50px
+			color: $white
+			background: $blue
+			&_danger
+				background: #cc0000
+		&-icon
+			position: absolute
+			top: 13px
+			left: 13px
+			width: 24px
+			height: 24px
+		&-title
+			font-size: 16px
+			font-weight: 700
+		&-info
+			display: flex
+			align-items: flex-start
+			background: #e8e8e8
+			font-size: 13px
+			word-break: break-word
+		&-name,
+		&-reference,
+		&-link
+			flex: 1 1 33.33%
+			padding: 13px
+		&-name,
+		&-reference
+			font-weight: 700
+		&-reference,
+		&-link
+			text-align: center
+		&-name
+			color: $blue
+		a
+			color: blue
+		&-table
+			padding: 15px 0
+		&-tr
+			display: flex
+			align-items: flex-start
+			padding: 0 8px
+			&_tfoot
+				justify-content: flex-end
+		&-td,
+		&-th
+			flex: 1 1 33.33%
+			padding: 5px
+			font-size: 16px
+			font-weight: 700
+			line-height: 1.3
+			&:not(:first-child)
+				text-align: center
+		&-tfoot
+			flex: 0 1 66.66%
+			padding: 0 5px 5px
+			font-size: 12px
+			font-weight: 400
+		&-errors
+			padding: 10px 0
+		&-error
+			padding: 10px 30px 10px 40px
+			font-size: 16px
+			line-height: 1.3
+		&-empty
+			padding: 20px
+			font-size: 20px
+			text-align: center

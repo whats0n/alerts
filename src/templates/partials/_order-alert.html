@@ -1,0 +1,112 @@
+{% macro call(props) %}
+<div class="order-alert">
+	{% if not props.noCounter %}
+		<div class="order-alert__counter">
+			<div class="order-alert__counter-header">
+				{% if props.unposted == 0 %}
+					{% set unpostedClass = 'gray' %}
+				{% else %}
+					{% set unpostedClass = 'red' %}
+				{% endif %}
+				{% if props.mismatched == 0 %}
+					{% set mismatchedClass = 'gray' %}
+				{% else %}
+					{% set mismatchedClass = 'orange' %}
+				{% endif %}
+				{% if props.fullyMatched == 0 %}
+					{% set fullyMatchedClass = 'gray' %}
+				{% else %}
+					{% set fullyMatchedClass = 'green' %}
+				{% endif %}
+				<div class="order-alert__counter-item order-alert__counter-item_{{unpostedClass}}">
+					<div class="order-alert__counter-title">Unposted</div>
+					<div class="order-alert__counter-value">{{props.unposted}}</div>
+				</div>
+				<div class="order-alert__counter-item order-alert__counter-item_{{mismatchedClass}}">
+					<div class="order-alert__counter-title">Mismatched</div>
+					<div class="order-alert__counter-value">{{props.mismatched}}</div>
+				</div>
+				<div class="order-alert__counter-item order-alert__counter-item_{{fullyMatchedClass}}">
+					<div class="order-alert__counter-title">Full Matched</div>
+					<div class="order-alert__counter-value">{{props.fullyMatched}}</div>
+				</div>
+			</div>
+			<div class="order-alert__counter-description {{props.counterDescriptionClass}}">{{props.counterDescription}}</div>
+		</div>
+	{% endif %}
+	{% if props.items %}
+		<div class="order-alert__items">
+			{% for item in props.items %}
+				<div class="order-alert__item">
+					<div class="order-alert__item-header {% if item.danger %}order-alert__item-header_danger{% endif %}">
+						{% if item.icon %}
+							<img src="img/{{item.icon}}.png" alt="Icon danger" class="order-alert__item-icon">
+						{% endif %}
+						<div class="order-alert__item-title">{{item.title}}</div>
+					</div>
+					{% if item.body %}
+						{% for item in item.body %}
+							<div class="order-alert__item-body">
+								<div class="order-alert__item-info">
+									<div class="order-alert__item-name">{{item.name}}</div>
+									<div class="order-alert__item-reference">Idoo Reference:</div>
+									<div class="order-alert__item-link">
+										<a href="#">{{item.link}}</a>
+									</div>
+								</div>
+								{% if item.table %}
+									<div class="order-alert__item-table">
+										{% if item.thead %}
+											<div class="order-alert__item-thead">
+												<div class="order-alert__item-tr">
+													<div class="order-alert__item-th"></div>
+													<div class="order-alert__item-th">Idoo</div>
+													<div class="order-alert__item-th">Wireless Standard</div>
+												</div>
+											</div>
+										{% endif %}
+										<div class="order-alert__item-tbody">
+											{% for item in item.tbody.totalAmount %}
+												<div class="order-alert__item-tr {% if item.footer %}order-alert__item-tr_tfoot{% endif %}">
+													{% if item.footer %}
+														<div class="order-alert__item-tfoot">{{item.footer}}</div>
+													{% else %}
+														<div class="order-alert__item-td">{% if loop.first %}Total amount:{% endif %}</div>
+														<div class="order-alert__item-td {{item.info[0].class}}">{{item.info[0].text | safe}}</div>
+														<div class="order-alert__item-td {{item.info[1].class}}">{{item.info[1].text | safe}}</div>
+													{% endif %}
+												</div>
+											{% endfor %}
+											{% for item in item.tbody.totalQty %}
+												<div class="order-alert__item-tr {% if item.footer %}order-alert__item-tr_tfoot{% endif %}">
+													{% if item.footer %}
+														<div class="order-alert__item-tfoot">{{item.footer}}</div>
+													{% else %}
+														<div class="order-alert__item-td">{% if loop.first %}Total QTY:{% endif %}</div>
+														<div class="order-alert__item-td {{item.info[0].class}}">{{item.info[0].text | safe}}</div>
+														<div class="order-alert__item-td {{item.info[1].class}}">{{item.info[1].text | safe}}</div>
+													{% endif %}
+												</div>
+											{% endfor %}
+										</div>
+									</div>
+								{% endif %}
+							</div>
+						{% endfor %}
+					{% endif %}
+					{% if item.errors %}
+						<div class="order-alert__item-errors">
+							{% for item in item.errors %}
+								<div class="order-alert__item-error">{{item | safe}}</div>
+							{% endfor %}
+						</div>
+					{% endif %}
+					{% if item.empty %}
+						<div class="order-alert__item-empty">{{item.empty}}</div>
+					{% endif %}
+				</div>
+			{% endfor %}
+		</div>
+	{% endif %}
+</div>
+{% endmacro %}

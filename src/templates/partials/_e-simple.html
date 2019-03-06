@@ -1,0 +1,101 @@
+{{orderAlert.call({
+	unposted: 1,
+	mismatched: 2,
+	fullyMatched: 7,
+	counterDescription: '10 out of 10 markets are analyzed',
+	items: [
+		{
+			title: 'Unposted Order(s) Details',
+			body: [
+				{
+					name: 'Amarillo',
+					link: 'MILLINGTON111418',
+					table: true,
+					tbody: {
+						totalAmount: [
+							{
+								info: [
+									{ text: '$ 700.00', class: 'is-red' }
+								]
+							}
+						],
+						totalQty: [
+							{
+								info: [
+									{ text: '15' }
+								]
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			title: 'Mismatched Order(s) Details',
+			body: [
+				{
+					name: 'Dallas',
+					link: 'MILLINGTON111418',
+					table: true,
+					thead: true,
+					tbody: {
+						totalAmount: [
+							{
+								info: [
+									{ text: '$ 1050.00', class: 'is-red' },
+									{ text: '$ 1000.00', class: 'is-red' }
+								]
+							},
+							{
+								info: [
+									{ text: '$ 1050.00' },
+									{ text: '$ 1000.00' }
+								]
+							},
+							{ footer: 'Without display phones and increase of coast' }
+						],
+						totalQty: [
+							{
+								info: [
+									{ text: '50' },
+									{ text: '30' }
+								]
+							},
+							{
+								info: [
+									{ text: '50' },
+									{ text: '30' }
+								]
+							},
+							{ footer: 'Without display phones' }
+						]
+					}
+				},
+				{
+					name: 'Amarillo',
+					link: 'MILLINGTON111418',
+					table: true,
+					thead: true,
+					tbody: {
+						totalAmount: [
+							{
+								info: [
+									{ text: '$ 1000.00' },
+									{ text: '$ 1000.00' }
+								]
+							}
+						],
+						totalQty: [
+							{
+								info: [
+									{ text: '50', class: 'is-red' },
+									{ text: '30', class: 'is-red' }
+								]
+							}
+						]
+					}
+				}
+			]
+		}
+	]
+})}}
