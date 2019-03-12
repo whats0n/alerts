@@ -33,6 +33,7 @@
           <li> <a href="#" data-modal-control="modal-info">modal-info</a> </li>
           <li> <a href="#" data-modal-control="modal-error">modal-error</a> </li>
           <li> <a href="#" data-modal-control="save-changes">save-changes</a> </li>
+          <li> <a href="#" data-modal-control="attention">attention</a> </li>
         </ul>
         <div class="modal modal_sm" data-modal="modal-info">
           <div class="modal__container" data-modal-container> <button class="modal__close" data-modal-close>
@@ -77,6 +78,24 @@
               </div>
               <div class="modal-content__body">Do you want to save changes you've mado on this screen?</div>
               <div class="modal-content__footer"> <button class="btn modal-content__btn" data-modal-close>Yes</button> <button class="btn btn_gray modal-content__btn" data-modal-close>No</button> <button class="btn btn_gray modal-content__btn" data-modal-close>Cancel</button> </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal modal_sm" data-modal="attention">
+          <div class="modal__container" data-modal-container> <button class="modal__close" data-modal-close>
+			
+	<svg class="icon icon-close "><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+
+		</button>
+            <div class="modal-content">
+              <div class="modal-content__header">
+                <div class="modal-content__title">Attention</div>
+              </div>
+              <div class="modal-content__body">
+                <p>Alert might be sent to "N" mobile numbers! Please check that you selected correct role and this role is correctly assigned to the users in the stores.</p>
+                <p><a href="#">View details</a></p>
+              </div>
+              <div class="modal-content__footer"> <button class="btn btn_red modal-content__btn" data-modal-close>Cancel</button> <button class="btn modal-content__btn" data-modal-close>Confirm</button> </div>
             </div>
           </div>
         </div>
