@@ -32,6 +32,9 @@ PageList:
 - file: messages-metro.html
 - file: messages-simple-metro.html
 - file: settings-multiple-metro.html
+- file: store-transfer-out-metro.html
+- file: inventory-count-results-metro.html
+- file: refund-metro.html
 
 # BOOST
 - file: page-boost.html
@@ -39,3 +42,6 @@ PageList:
 - file: messages-boost.html
 - file: messages-simple-boost.html
 - file: settings-multiple-boost.html
+- file: store-transfer-out-boost.html
+- file: inventory-count-results-boost.html
+- file: refund-boost.html
