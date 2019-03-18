@@ -8,6 +8,17 @@
 		background: $metroPrimary
 	+boost
 		background: $elevateSecondary
+	&_simplest
+		+boost
+			background: $elevatePrimary
+			.header
+				&__help,
+				&__back
+					+hover('boost')
+						background: $elevatePrimary
+					&:active
+						+boost
+							background: $elevatePrimary
 	&__help
 		right: 0
 		+vertical
