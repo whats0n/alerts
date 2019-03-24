@@ -1,0 +1,12 @@
+---
+title: 'Daily Orders Discrepancy Alert'
+simpleHeader: true
+footer: true
+---
+{% extends "layouts/_layout-emails.html" %}
+
+{% block content %}
+	
+	{% include 'partials/_email-mismatch.html' %}
+
+{% endblock %}
