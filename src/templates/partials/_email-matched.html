@@ -1,0 +1,12 @@
+<table
+	border="0"
+	cellspacing="0"
+	cellpadding="0"
+	style="table-layout: fixed; padding: 0; margin: 0 auto; border-collapse: collapse; border-spacing: 0; width: 100%;"
+>
+	{% set orderHeaderMessage = 'Fully Matched Order' %}
+	{% set orderHeaderMessageColor = '#000' %}
+	{% set orderHeaderIcon = 'https://raw.githubusercontent.com/whats0n/order-magic/emails/check-mark.png' %}
+	{% include 'partials/email/_order-header.html' %}
+	{% include 'partials/email/_order-details.html' %}
+</table>

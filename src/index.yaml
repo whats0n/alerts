@@ -27,6 +27,8 @@ PageList:
 - file: e-error-small.html
 
 - file: email-mismatch.html
+- file: email-matched.html
+- file: email-error.html
 
 # METRO
 - file: page-metro.html
