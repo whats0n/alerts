@@ -1,0 +1,214 @@
+<table
+	border="0"
+	cellspacing="0"
+	cellpadding="0"
+	style="table-layout: fixed; padding: 0; margin: 0 auto; border-collapse: collapse; border-spacing: 0; width: 100%;"
+>
+	{% set marketsAnalyzed = {
+		score: '10 out of 10 markets are analyzed',
+		scoreColor: '#3893d3',
+		list: [
+			{
+				title: 'Unposted',
+				value: '1',
+				color: '#cc0000'
+			},
+			{
+				title: 'Mismatched',
+				value: '2',
+				color: '#ff6600'
+			},
+			{
+				title: 'Fully Matched',
+				value: '7',
+				color: '#82cc78'
+			}
+		]
+	} %}
+	{% include 'partials/email/_markets-analyzed.html' %}
+	
+	<tr>
+		<td style="padding: 0; background: #fff; font-size: 16px; font-weight: 700;">
+			{% for item in [
+				{
+					title: 'Unposted Order(s) Details',
+					orders: [
+						{
+							divider: [
+								{ text: 'Amarillo' },
+								{ text: 'Idoo Reference:' },
+								{ text: '<a href="#" style="font-weight: 400;">MILLINGTON111418</a>' }
+							],
+							table: [
+								[
+									{ text: 'Total amount:' },
+									{ text: '$ 700.00', color: '#cc0000' }
+								],
+								[
+									{ text: 'Total QTY:' },
+									{ text: '15', color: '#cc0000' }
+								]
+							]
+						}
+					]
+				},
+				{
+					title: 'Mismatched Order(s) Details',
+					subtable: {
+						label: 'Receiving Settings:',
+						value: [ 'Increase cost 10%;', 'Do not add Display phones' ]
+					},
+					orders: [
+						{
+							divider: [
+								{ text: 'Dallas' },
+								{ text: 'Idoo Reference:' },
+								{ text: '<a href="#" style="font-weight: 400;">MILLINGTON111418</a>' }
+							],
+							list: [
+								{
+									name: 'Idoo',
+									amount: '$ 5,504.84',
+									qty: '50',
+									amountColor: '#cc0000'
+								},
+								{
+									name: 'Adjustment',
+									amount: '$ 543.91',
+									qty: '(2)'
+								},
+								{
+									name: 'Wireless Standard',
+									amount: '$ 6,048.48',
+									qty: '48',
+									amountColor: '#cc0000'
+								},
+								{
+									name: 'Variance',
+									amount: '$ 0.27',
+									qty: '0',
+									amountColor: '#cc0000'
+								}
+							]
+						},
+						{
+							divider: [
+								{ text: 'Abilene-Sweetwater' },
+								{ text: 'Idoo Reference:' },
+								{ text: '<a href="#" style="font-weight: 400;">OAKCOURT111418</a>' }
+							],
+							list: [
+								{
+									name: 'Idoo',
+									amount: '$ 1000.00',
+									qty: '25',
+									qtyColor: '#cc0000'
+								},
+								{
+									name: 'Adjustment',
+									amount: '$ 1000.00',
+									qty: '(2)'
+								},
+								{
+									name: 'Wireless Standard',
+									amount: '$ 1100.00',
+									qty: '25',
+									qtyColor: '#cc0000'
+								},
+								{
+									name: 'Variance',
+									amount: '$ 0.00',
+									qty: '(2)',
+									qtyColor: '#cc0000'
+								}
+							]
+						}
+					]
+				}
+			] %}
+				<table
+					border="0"
+					cellspacing="0"
+					cellpadding="0"
+					style="table-layout: fixed; margin: 0; border-collapse: collapse; border-spacing: 0; width: 100%; color: #fff; background: #3893d3;"
+				>
+					<tr>
+						<td style="vertical-align: middle; padding: 15px 15px 15px 50px;">{{item.title}}</td>
+					</tr>
+				</table>
+				{% if item.subtable %}
+					<table
+						border="0"
+						cellspacing="0"
+						cellpadding="0"
+						style="table-layout: fixed; margin: 15px 0; border-collapse: collapse; border-spacing: 0; width: 100%;"
+					>
+						<tr>
+							<td style="vertical-align: middle; padding: 5px 13px; width: 33.3%; vertical-align: top;" rowspan="{{item.subtable.value.length + 1}}">{{item.subtable.label | safe}}</td>
+						</tr>
+						{% for item in item.subtable.value %}
+							<tr>
+								<td style="vertical-align: middle; padding: 5px; width: 66.7%; vertical-align: top;">{{item | safe}}</td>
+							</tr>
+						{% endfor %}
+					</table>
+				{% endif %}
+				{% for order in item.orders %}
+					<!-- begin orders info -->
+					<table
+						border="0"
+						cellspacing="0"
+						cellpadding="0"
+						style="table-layout: fixed; margin: 0; border-collapse: collapse; border-spacing: 0; width: 100%; background: #e8e8e8; font-size: 13px; -ms-word-break: break-word; word-break: break-word;"
+					>
+						<tr>
+							<td style="padding: 13px; width: 33.3%; color: #3893d3;">{{order.divider[0].text | safe}}</td>
+							<td style="padding: 13px 5px 13px; width: 33.3%;">{{order.divider[1].text | safe}}</td>
+							<td style="padding: 13px 5px 13px; width: 33.3%;">{{order.divider[2].text | safe}}</td>
+						</tr>
+					</table>
+					{% if order.table %}
+						<table
+							border="0"
+							cellspacing="0"
+							cellpadding="0"
+							style="table-layout: fixed; margin: 15px 0; border-collapse: collapse; border-spacing: 0; width: 100%;"
+						>
+							{% for item in order.table %}
+								<tr>
+									<td style="vertical-align: top; padding: 5px 5px 5px 13px; width: 33.3%;">{{item[0].text | safe}}</td>
+									<td style="vertical-align: top; padding: 5px 5px; width: 33.3%;{% if item[1].color %} color: {{item[1].color}};{% endif %}">{{item[1].text | safe}}</td>
+									<td style="vertical-align: top; padding: 5px 5px; width: 33.3%;{% if item[2].color %} color: {{item[2].color}};{% endif %}">{{item[2].text | safe}}</td>
+								</tr>
+							{% endfor %}
+						</table>
+					{% endif %}
+					{% if order.list %}
+						<table
+							border="0"
+							cellspacing="0"
+							cellpadding="0"
+							style="table-layout: fixed; margin: 15px 0; border-collapse: collapse; border-spacing: 0; width: 100%;"
+						>
+							<thead>
+								<tr>
+									<td style="vertical-align: top; padding: 5px 5px 15px; width: 33.3%; text-align: left;"></td>
+									<td style="vertical-align: top; padding: 5px 5px 15px; width: 33.3%; text-align: left;">Total amount</td>
+									<td style="vertical-align: top; padding: 5px 5px 15px; width: 33.3%; text-align: left;">Total QTY</td>
+								</tr>
+							</thead>
+							{% for item in order.list %}
+								<tr>
+									<td style="vertical-align: top; padding: 5px 5px 5px 13px; width: 33.3%;">{{item.name | safe}}</td>
+									<td style="vertical-align: top; padding: 5px 5px; width: 33.3%;{% if item.amountColor %} color: {{item.amountColor}};{% endif %}">{{item.amount | safe}}</td>
+									<td style="vertical-align: top; padding: 5px 5px; width: 33.3%;{% if item.qtyColor %} color: {{item.qtyColor}};{% endif %}">{{item.qty | safe}}</td>
+								</tr>
+							{% endfor %}
+						</table>
+					{% endif %}
+					<!-- end orders info -->
+				{% endfor %}
+			{% endfor %}
+		</td>
+	</tr>
+</table>

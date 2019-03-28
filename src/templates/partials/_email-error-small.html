@@ -1,0 +1,20 @@
+<table
+	border="0"
+	cellspacing="0"
+	cellpadding="0"
+	style="table-layout: fixed; padding: 0; margin: 0 auto; border-collapse: collapse; border-spacing: 0; width: 100%;"
+>
+	{% set info = [
+		{
+			title: 'Attention!',
+			background: '#cc0000',
+			icon: 'img/alert.png',
+			alt: '!',
+			description: [
+				'Order Magic is unable to verify Idoo Orders. <br> Please contact BTB Soft Inc Support for further assistance.',
+				'Error message: &#60;Error Text&#62;'
+			]
+		}
+	] %}
+	{% include 'partials/email/_info.html' %}
+</table>

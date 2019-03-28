@@ -30,6 +30,13 @@ PageList:
 - file: email-matched.html
 - file: email-error.html
 
+- file: email-simple.html
+- file: email-simple-update.html
+- file: email-error-update.html
+- file: email-empty.html
+- file: email-small.html
+- file: email-error-small.html
+
 # METRO
 - file: page-metro.html
 - file: modals-metro.html

@@ -1,0 +1,19 @@
+<tr>
+	<td style="padding: 30px 10px 20px; margin: 0; background: #fff;">
+		<table border="0" cellspacing="0" cellpadding="0" style="table-layout: fixed; margin: 0; border-collapse: collapse; border-spacing: 0; width: 100%;">
+			<tr>
+				{% for item in marketsAnalyzed.list %}
+					<td style="width: 33.33%; text-align: center;">
+						<p style="padding: 0; margin: 0 0 15px; font-size: 14px; font-weight: 700;">{{item.title}}</p>
+						<div style="margin: 0 auto; border-bottom: 10px solid {{item.color}}; width: 80px; color: {{item.textColor or 'black'}}; font-size: 48px; font-weight: 700;">{{item.value}}</div>
+					</td>
+				{% endfor %}
+			</tr>
+		</table>
+		<table border="0" cellspacing="0" cellpadding="0" style="table-layout: fixed; margin: 0; border-collapse: collapse; border-spacing: 0; width: 100%;">
+			<tr>
+				<td style="padding-top: 20px; color: {{marketsAnalyzed.scoreColor}}; font-size: 18px; font-weight: 700; text-align: center;">{{marketsAnalyzed.score}}</td>
+			</tr>
+		</table>
+	</td>
+</tr>

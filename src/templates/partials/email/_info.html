@@ -1,0 +1,94 @@
+<tr>
+	<td style="padding: 0; background: #fff; font-size: 16px; font-weight: 700;">
+		{% for item in info %}
+			<table border="0" cellspacing="0" cellpadding="0" style="table-layout: fixed; margin: 0; border-collapse: collapse; border-spacing: 0; width: 100%; color: #fff; background: {{item.background}};">
+				<tr>
+					<td style="vertical-align: middle; padding: 13px; width: 24px; font-size: 0;">
+						{% if item.icon %}
+							<img src="{{item.icon}}" alt="{{item.alt}}" style="width: 24px;" width="24px">
+						{% endif %}
+					</td>
+					<td style="vertical-align: middle; padding: 15px 15px 15px 0;">{{item.title}}</td>
+				</tr>
+			</table>
+			{% if item.orders %}
+				{% for order in item.orders %}
+					<!-- begin orders info -->
+					<table border="0" cellspacing="0" cellpadding="0" style="table-layout: fixed; margin: 0; border-collapse: collapse; border-spacing: 0; width: 100%; background: #e8e8e8; font-size: 13px; -ms-word-break: break-word;
+					word-break: break-word;">
+						<tr>
+							<td style="padding: 13px; width: 33.3%; color: #3893d3;">{{order.main[0].text | safe}}</td>
+							<td style="padding: 13px; width: 33.3%;">{{order.main[1].text | safe}}</td>
+							<td style="padding: 13px; width: 33.3%;">{{order.main[2].text | safe}}</td>
+						</tr>
+					</table>
+					<table border="0" cellspacing="0" cellpadding="0" style="table-layout: fixed; margin: 15px 0; border-collapse: collapse; border-spacing: 0; width: 100%;">
+						{% if order.headings %}
+							<tr>
+								<td style="vertical-align: top; padding: 5px 5px 5px 13px; width: 33.3%;"></td>
+								<td style="vertical-align: top; padding: 5px 5px 5px; width: 33.3%;text-align: center;">Idoo</td>
+								<td style="vertical-align: top; padding: 5px 5px 5px; width: 33.3%;text-align: center;">Wireless Standard</td>
+							</tr>
+						{% endif %}
+						{% for item in order.table %}
+							<tr>
+								<td style="vertical-align: top; padding: 5px 5px 5px 13px; width: 33.3%;">{{item[0].text | safe}}</td>
+								<td style="vertical-align: top; padding: 5px 5px; width: 33.3%;{% if item[1].color %} color: {{item[1].color}};{% endif %} text-align: center;">{{item[1].text | safe}}</td>
+								<td style="vertical-align: top; padding: 5px 5px; width: 33.3%;{% if item[2].color %} color: {{item[2].color}};{% endif %} text-align: center;">{{item[2].text | safe}}</td>
+							</tr>
+							{% if item.length == 4 %}
+								<tr>
+									<td style="vertical-align: top; padding: 5px 5px 5px 13px; width: 33.3%;"></td>
+									<td style="vertical-align: top; padding: 5px 5px; width: 33.3%; text-align: center;">{{item[1].text | safe}}</td>
+									<td style="vertical-align: top; padding: 5px 5px; width: 33.3%; text-align: center;">{{item[2].text | safe}}</td>
+								</tr>
+								<tr>
+									<td style="vertical-align: top; padding: 0px 5px 5px 13px; width: 33.3%;"></td>
+									<td colspan="2" style="vertical-align: top; padding: 0px 5px 5px 13px; width: 66.7%; font-size: 12px; font-weight: 400;">{{item[3].text}}</td>
+								</tr>
+							{% endif %}
+						{% endfor %}
+					</table>
+					<!-- end orders info -->
+				{% endfor %}
+			{% endif %}
+			{% for item in item.list %}
+				{% if item.header %}
+					<table border="0" cellspacing="0" cellpadding="0" style="table-layout: fixed; margin: 0; border-collapse: collapse; border-spacing: 0; width: 100%; background: #e8e8e8;">
+						<tr>
+							<td style="padding: 15px; color: #3893d3;">{{item.header[0].text}}</td>
+							<td style="padding: 15px; text-align: center;">{{item.header[1].text}}</td>
+							<td style="padding: 15px; text-align: center;">{{item.header[2].text}}</td>
+						</tr>
+					</table>
+				{% else %}
+					<table border="0" cellspacing="0" cellpadding="0" style="table-layout: fixed; margin: 15px 0 {{item.marginBottom}}; border-collapse: collapse; border-spacing: 0; width: 100%;">
+						{% for item in item.body %}
+							<tr>
+								<td style="padding-left: 50px; {% if item.body[0].color %}color: {{item[0].color}};{% endif %}">{{item[0].text | safe}}</td>
+								<td style="{% if item[1].color %}color: {{item[1].color}};{% endif %} text-align: center;">{{item[1].text | safe}}</td>
+								<td style="{% if item[2].color %}color: {{item[2].color}};{% endif %} text-align: center;">{{item[2].text | safe}}</td>
+							</tr>
+						{% endfor %}
+					</table>
+				{% endif %}
+			{% endfor %}
+			{% if item.description %}
+				<table border="0" cellspacing="0" cellpadding="0" style="table-layout: fixed; margin: 10px 0; border-collapse: collapse; border-spacing: 0; width: 100%; font-weight: 400;">
+					{% for item in item.description %}
+						<tr>
+							<td style="padding: 10px 30px 10px 40px;">{{item | safe}}</td>
+						</tr>
+					{% endfor %}
+				</table>
+			{% endif %}
+			{% if item.text %}
+				<table border="0" cellspacing="0" cellpadding="0" style="table-layout: fixed; margin: 10px 0; border-collapse: collapse; border-spacing: 0; width: 100%; font-size: 20px; font-weight: 400; text-align: center;">
+					<tr>
+						<td style="padding: 10px 30px 10px;">{{item.text | safe}}</td>
+					</tr>
+				</table>
+			{% endif %}
+		{% endfor %}
+	</td>
+</tr>
