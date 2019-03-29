@@ -21,6 +21,7 @@ PageList:
 - file: match-error.html
 
 - file: e-simple.html
+- file: e-simple-update.html
 - file: e-error.html
 - file: e-empty.html
 - file: e-small.html

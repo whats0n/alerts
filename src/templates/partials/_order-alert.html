@@ -1,5 +1,5 @@
 {% macro call(props) %}
-<div class="order-alert">
+<div class="order-alert {{props.class}}">
 	{% if not props.noCounter %}
 		<div class="order-alert__counter">
 			<div class="order-alert__counter-header">
@@ -44,6 +44,21 @@
 						{% endif %}
 						<div class="order-alert__item-title">{{item.title}}</div>
 					</div>
+					{% if item.middle %}
+						<div class="order-alert__item-body">
+							<div class="order-alert__item-table">
+								<div class="order-alert__item-tbody">
+									<div class="order-alert__item-tr {% if item.footer %}order-alert__item-tr_tfoot{% endif %}">
+										<div class="order-alert__item-td">Receiving Settings:</div>
+										<div class="order-alert__item-td order-alert__item-td_md">
+											<div class="order-alert__item-td-in">Increase cost 10%;</div>
+											<div class="order-alert__item-td-in">Do not add Display phones</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					{% endif %}
 					{% if item.body %}
 						{% for item in item.body %}
 							<div class="order-alert__item-body">

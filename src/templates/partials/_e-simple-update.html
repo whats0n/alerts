@@ -1,0 +1,197 @@
+{% set counter = {
+  unposted: 1,
+  mismatched: 2,
+  fullyMatched: 7,
+  description: '10 out of 10 markets are analyzed'
+} %}
+<div class="order-alert order-alert_new">
+  <div class="order-alert__counter">
+    <div class="order-alert__counter-header">
+      {% if counter.unposted == 0 %}
+        {% set unpostedClass = 'gray' %}
+      {% else %}
+        {% set unpostedClass = 'red' %}
+      {% endif %}
+      {% if counter.mismatched == 0 %}
+        {% set mismatchedClass = 'gray' %}
+      {% else %}
+        {% set mismatchedClass = 'orange' %}
+      {% endif %}
+      {% if counter.fullyMatched == 0 %}
+        {% set fullyMatchedClass = 'gray' %}
+      {% else %}
+        {% set fullyMatchedClass = 'green' %}
+      {% endif %}
+      <div class="order-alert__counter-item order-alert__counter-item_{{unpostedClass}}">
+        <div class="order-alert__counter-title">Unposted</div>
+        <div class="order-alert__counter-value">{{counter.unposted}}</div>
+      </div>
+      <div class="order-alert__counter-item order-alert__counter-item_{{mismatchedClass}}">
+        <div class="order-alert__counter-title">Mismatched</div>
+        <div class="order-alert__counter-value">{{counter.mismatched}}</div>
+      </div>
+      <div class="order-alert__counter-item order-alert__counter-item_{{fullyMatchedClass}}">
+        <div class="order-alert__counter-title">Full Matched</div>
+        <div class="order-alert__counter-value">{{counter.fullyMatched}}</div>
+      </div>
+    </div>
+    <div class="order-alert__counter-description">{{counter.description}}</div>
+  </div>
+
+  <div class="order-alert__items">
+    {% for item in [
+      {
+        title: 'Unposted Order(s) Details',
+        body: [
+          {
+            name: 'Amarillo',
+            link: 'MILLINGTON111418',
+            noInfo: true,
+            middle: [
+              { label: 'Total amount:', value: ['$ 700.00'], valueColor: 'is-red' },
+              { label: 'Total QTY:', value: ['15'], valueColor: 'is-red' }
+            ]
+          }
+        ]
+      },
+      {
+        title: 'Mismatched Order(s) Details',
+        body: [
+          {
+            name: 'Dallas',
+            link: 'MILLINGTON111418',
+            middle: [
+              { label: 'Receiving Settings:', value: ['Increase cost 10%;', 'Do not add Display phones'] }
+            ],
+            table: true,
+            thead: true,
+            tbody: [
+              [
+                { text: 'Idoo' },
+                { text: '$ 5,504.84', class: 'is-red' },
+                { text: '50' }
+              ],
+              [
+                { text: 'Adjustment' },
+                { text: '$ 543.91' },
+                { text: '(2)' }
+              ],
+              [
+                { text: 'Wireless Standard' },
+                { text: '$ 6,048.48', class: 'is-red' },
+                { text: '48' }
+              ],
+              [
+                { text: 'Variance' },
+                { text: '$ 0.27', class: 'is-red' },
+                { text: '0' }
+              ]
+            ]
+          },
+          {
+            name: 'Amarillo',
+            link: 'MILLINGTON111418',
+            table: true,
+            thead: true,
+            tbody: [
+              [
+                { text: 'Idoo' },
+                { text: '$ 1000.00' },
+                { text: '25', class: 'is-red' }
+              ],
+              [
+                { text: 'Adjustment' },
+                { text: '$ 1000.00' },
+                { text: '(2)' }
+              ],
+              [
+                { text: 'Wireless Standard' },
+                { text: '$ 1100.00' },
+                { text: '25', class: 'is-red' }
+              ],
+              [
+                { text: 'Variance' },
+                { text: '$ 0.00' },
+                { text: '(2)', class: 'is-red' }
+              ]
+            ]
+          }
+        ]
+      }
+    ] %}
+      <div class="order-alert__item">
+        <div class="order-alert__item-header {% if item.danger %}order-alert__item-header_danger{% endif %}">
+          {% if item.icon %}
+            <img src="img/{{item.icon}}.png" alt="Icon danger" class="order-alert__item-icon">
+          {% endif %}
+          <div class="order-alert__item-title">{{item.title}}</div>
+        </div>
+        {% if item.body %}
+          {% for item in item.body %}
+            <div class="order-alert__item-body">
+              {% if item.middle %}
+              <div class="order-alert__item-table">
+                <div class="order-alert__item-tbody">
+                  {% for item in item.middle %}
+                    <div class="order-alert__item-tr">
+                      <div class="order-alert__item-td">{{item.label}}</div>
+                      <div class="order-alert__item-td order-alert__item-td_md {{item.valueColor}}">
+                        {% for item in item.value %}
+                          <div class="order-alert__item-td-in">{{item | safe}}</div>
+                        {% endfor %}
+                      </div>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+              {% endif %}
+
+              {% if not item.noInfo %}
+                <div class="order-alert__item-info">
+                  <div class="order-alert__item-name">{{item.name}}</div>
+                  <div class="order-alert__item-reference">Idoo Reference:</div>
+                  <div class="order-alert__item-link">
+                    <a href="#">{{item.link}}</a>
+                  </div>
+                </div>
+              {% endif %}
+
+              {% if item.table %}
+                <div class="order-alert__item-table">
+                  {% if item.thead %}
+                    <div class="order-alert__item-thead">
+                      <div class="order-alert__item-tr">
+                        <div class="order-alert__item-th"></div>
+                        <div class="order-alert__item-th">Total amount</div>
+                        <div class="order-alert__item-th">Total QTY</div>
+                      </div>
+                    </div>
+                  {% endif %}
+                  <div class="order-alert__item-tbody">
+                    {% for item in item.tbody %}
+                      <div class="order-alert__item-tr">
+                        {% for item in item %}
+                          <div class="order-alert__item-td {{item.class}}">{{item.text}}</div>
+                        {% endfor %}
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              {% endif %}
+            </div>
+          {% endfor %}
+        {% endif %}
+        {% if item.errors %}
+          <div class="order-alert__item-errors">
+            {% for item in item.errors %}
+              <div class="order-alert__item-error">{{item | safe}}</div>
+            {% endfor %}
+          </div>
+        {% endif %}
+        {% if item.empty %}
+          <div class="order-alert__item-empty">{{item.empty}}</div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>

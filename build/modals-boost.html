@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-
   <head>
     <meta charset="utf-8">
     <title>Modals</title>
@@ -8,21 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" media="all" href="css/app.css"> </head>
-
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
   <body class="is-boost">
     <div id="root">
       <!-- BEGIN content -->
       <!-- begin header -->
-      <header class="header "> <button class="header__back">
-			
-	<svg class="icon icon-arrow-left header__back-icon"><use xlink:href="img/sprite.svg#icon-arrow-left"></use></svg>
-
-		</button> <button class="header__help">
-			
-	<svg class="icon icon-question-option header__help-icon"><use xlink:href="img/sprite.svg#icon-question-option"></use></svg>
-
-		</button>
+      <header class="header ">
+        <button class="header__back">
+          <svg class="icon icon-arrow-left header__back-icon">
+            <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+          </svg>
+        </button>
+        <button class="header__help">
+          <svg class="icon icon-question-option header__help-icon">
+            <use xlink:href="img/sprite.svg#icon-question-option"></use>
+          </svg>
+        </button>
         <div class="header__inner">
           <div class="header__title">Modals</div>
         </div>
@@ -30,63 +31,83 @@
       <!-- end header -->
       <div class="main">
         <ul>
-          <li> <a href="#" data-modal-control="modal-info">modal-info</a> </li>
-          <li> <a href="#" data-modal-control="modal-error">modal-error</a> </li>
-          <li> <a href="#" data-modal-control="save-changes">save-changes</a> </li>
-          <li> <a href="#" data-modal-control="attention">attention</a> </li>
+          <li>
+            <a href="#" data-modal-control="modal-info">modal-info</a>
+          </li>
+          <li>
+            <a href="#" data-modal-control="modal-error">modal-error</a>
+          </li>
+          <li>
+            <a href="#" data-modal-control="save-changes">save-changes</a>
+          </li>
+          <li>
+            <a href="#" data-modal-control="attention">attention</a>
+          </li>
         </ul>
         <div class="modal modal_sm" data-modal="modal-info">
-          <div class="modal__container" data-modal-container> <button class="modal__close" data-modal-close>
-			
-	<svg class="icon icon-close "><use xlink:href="img/sprite.svg#icon-close"></use></svg>
-
-		</button>
+          <div class="modal__container" data-modal-container>
+            <button class="modal__close" data-modal-close>
+              <svg class="icon icon-close ">
+                <use xlink:href="img/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
             <div class="modal-content">
               <div class="modal-content__header">
                 <div class="modal-content__title">Info: header</div>
               </div>
-              <div class="modal-content__body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, omnis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque optio culpa architecto incidunt obcaecati quidem, sapiente officia quasi nihil consectetur.
-                </div>
-              <div class="modal-content__footer"> <button class="btn modal-content__btn" data-modal-close>OK</button> </div>
+              <div class="modal-content__body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, omnis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque optio culpa architecto incidunt obcaecati quidem, sapiente officia quasi nihil consectetur. </div>
+              <div class="modal-content__footer">
+                <button class="btn modal-content__btn" data-modal-close>OK</button>
+              </div>
             </div>
           </div>
         </div>
         <div class="modal modal_sm" data-modal="modal-error">
-          <div class="modal__container" data-modal-container> <button class="modal__close" data-modal-close>
-			
-	<svg class="icon icon-close "><use xlink:href="img/sprite.svg#icon-close"></use></svg>
-
-		</button>
+          <div class="modal__container" data-modal-container>
+            <button class="modal__close" data-modal-close>
+              <svg class="icon icon-close ">
+                <use xlink:href="img/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
             <div class="modal-content">
               <div class="modal-content__header">
                 <div class="modal-content__title">Error</div>
               </div>
               <div class="modal-content__body"><em>Order #1035 was</em> not <em>created</em>. Please configure product category for the vendor Alphacomm</div>
-              <div class="modal-content__footer"> <button class="btn modal-content__btn" data-modal-close>Setup</button> <button class="btn modal-content__btn" data-modal-close>OK</button> </div>
+              <div class="modal-content__footer">
+                <button class="btn modal-content__btn" data-modal-close>Setup</button>
+                <button class="btn modal-content__btn" data-modal-close>OK</button>
+              </div>
             </div>
           </div>
         </div>
         <div class="modal modal_md" data-modal="save-changes">
-          <div class="modal__container" data-modal-container> <button class="modal__close" data-modal-close>
-			
-	<svg class="icon icon-close "><use xlink:href="img/sprite.svg#icon-close"></use></svg>
-
-		</button>
+          <div class="modal__container" data-modal-container>
+            <button class="modal__close" data-modal-close>
+              <svg class="icon icon-close ">
+                <use xlink:href="img/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
             <div class="modal-content">
               <div class="modal-content__header">
                 <div class="modal-content__title">Save Changes?</div>
               </div>
               <div class="modal-content__body">Do you want to save changes you've mado on this screen?</div>
-              <div class="modal-content__footer"> <button class="btn modal-content__btn" data-modal-close>Yes</button> <button class="btn btn_gray modal-content__btn" data-modal-close>No</button> <button class="btn btn_gray modal-content__btn" data-modal-close>Cancel</button> </div>
+              <div class="modal-content__footer">
+                <button class="btn modal-content__btn" data-modal-close>Yes</button>
+                <button class="btn btn_gray modal-content__btn" data-modal-close>No</button>
+                <button class="btn btn_gray modal-content__btn" data-modal-close>Cancel</button>
+              </div>
             </div>
           </div>
         </div>
         <div class="modal modal_sm" data-modal="attention">
-          <div class="modal__container" data-modal-container> <button class="modal__close" data-modal-close>
-			
-	<svg class="icon icon-close "><use xlink:href="img/sprite.svg#icon-close"></use></svg>
-
-		</button>
+          <div class="modal__container" data-modal-container>
+            <button class="modal__close" data-modal-close>
+              <svg class="icon icon-close ">
+                <use xlink:href="img/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
             <div class="modal-content">
               <div class="modal-content__header">
                 <div class="modal-content__title">Attention</div>
@@ -95,7 +116,10 @@
                 <p>Alert might be sent to "N" mobile numbers! Please check that you selected correct role and this role is correctly assigned to the users in the stores.</p><br>
                 <p><a href="#">View details</a></p>
               </div>
-              <div class="modal-content__footer"> <button class="btn modal-content__btn" data-modal-close>Confirm</button> <button class="btn btn_gray modal-content__btn" data-modal-close>Cancel</button> </div>
+              <div class="modal-content__footer">
+                <button class="btn modal-content__btn" data-modal-close>Confirm</button>
+                <button class="btn btn_gray modal-content__btn" data-modal-close>Cancel</button>
+              </div>
             </div>
           </div>
         </div>
@@ -106,5 +130,4 @@
     <script type="text/javascript" src="js/app.js"></script>
     <!-- END scripts -->
   </body>
-
 </html>
