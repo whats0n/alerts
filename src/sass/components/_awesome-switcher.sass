@@ -12,6 +12,20 @@
 		.awesome-switcher__control
 			&:before
 				box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.3)
+	&_one-color
+		.awesome-switcher
+			&__control
+				border-color: $blue
+				+metro
+					border-color: $metroPrimary
+				+boost
+					border-color: $elevatePrimary
+				&:before
+					background: $blue
+					+metro
+						background: $metroPrimary
+					+boost
+						background: $elevatePrimary
 	&__input
 		display: none
 	&__input:checked +
