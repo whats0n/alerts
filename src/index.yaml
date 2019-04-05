@@ -48,6 +48,17 @@ PageList:
 - file: inventory-count-results-metro.html
 - file: refund-metro.html
 
+- file: matched-metro.html
+- file: mismatch-metro.html
+- file: match-error-metro.html
+
+- file: e-simple-metro.html
+- file: e-simple-update-metro.html
+- file: e-error-metro.html
+- file: e-empty-metro.html
+- file: e-small-metro.html
+- file: e-error-small-metro.html
+
 # BOOST
 - file: page-boost.html
 - file: modals-boost.html
@@ -57,3 +68,14 @@ PageList:
 - file: store-transfer-out-boost.html
 - file: inventory-count-results-boost.html
 - file: refund-boost.html
+
+- file: matched-boost.html
+- file: mismatch-boost.html
+- file: match-error-boost.html
+
+- file: e-simple-boost.html
+- file: e-simple-update-boost.html
+- file: e-error-boost.html
+- file: e-empty-boost.html
+- file: e-small-boost.html
+- file: e-error-small-boost.html
