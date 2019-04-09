@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
   <head>
     <meta charset="utf-8">
     <title>Alert Settings</title>
@@ -7,23 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" media="all" href="css/app.css">
-  </head>
+    <link rel="stylesheet" media="all" href="css/app.css"> </head>
+
   <body class="is-boost">
     <div id="root">
       <!-- BEGIN content -->
       <!-- begin header -->
-      <header class="header ">
-        <button class="header__back">
-          <svg class="icon icon-arrow-left header__back-icon">
-            <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
-          </svg>
-        </button>
-        <button class="header__help">
-          <svg class="icon icon-question-option header__help-icon">
-            <use xlink:href="img/sprite.svg#icon-question-option"></use>
-          </svg>
-        </button>
+      <header class="header "> <button class="header__back">
+			
+	<svg class="icon icon-arrow-left header__back-icon"><use xlink:href="img/sprite.svg#icon-arrow-left"></use></svg>
+
+		</button> <button class="header__help">
+			
+	<svg class="icon icon-question-option header__help-icon"><use xlink:href="img/sprite.svg#icon-question-option"></use></svg>
+
+		</button>
         <div class="header__inner">
           <div class="header__title">Alert Settings</div>
         </div>
@@ -39,13 +38,11 @@
             <div class="settings__body">
               <div class="settings__inner">
                 <div class="settings__row">
-                  <div class="form-group form-group_inline">
-                    <label for="send-alert" class="label form-group__label">Enable Alert</label>
-                    <label class="awesome-switcher form-group__switcher">
-                      <input id="send-alert" type="checkbox" class="awesome-switcher__input">
-                      <span class="awesome-switcher__control"></span>
-                    </label>
-                  </div>
+                  <div class="form-group form-group_inline"> <label for="send-alert" class="label form-group__label">Enable Alert</label> <label class="awesome-switcher form-group__switcher">
+		<input id="send-alert" type="checkbox" class="awesome-switcher__input">
+		<span class="awesome-switcher__control"></span>
+		
+	</label> </div>
                 </div>
                 <div class="form-group">
                   <div class="label form-group__label">When:</div>
@@ -54,31 +51,27 @@
                   <div class="form-group">
                     <div class="form-group__field">
                       <div class="form-group__description">Cash Pickup is processed and amount is&nbsp;more&nbsp;than&nbsp;$</div>
-                      <div class="form-group__control form-group__control_inline">
-                        <input type="text" class="input form-group__input_center" value="10 000">
-                      </div>
+                      <div class="form-group__control form-group__control_inline"> <input type="text" class="input form-group__input_center" value="10 000"> </div>
                     </div>
                   </div>
                 </div>
                 <div class="settings__row">
-                  <div class="form-group form-group_inline">
-                    <label for="send-alert" class="label label_simple form-group__label form-group__label_static">All refund types</label>
-                    <label class="awesome-switcher awesome-switcher_one-color form-group__switcher">
-                      <input id="all-refund-types" type="checkbox" class="awesome-switcher__input">
-                      <span class="awesome-switcher__control"></span>
-                      <span class="label label_simple awesome-switcher__text">Only Card refund</span>
-                    </label>
-                  </div>
+                  <div class="form-group form-group_inline"> <label for="send-alert" class="label label_simple form-group__label form-group__label_static">All refund types</label> <label class="awesome-switcher awesome-switcher_one-color form-group__switcher">
+		<input id="all-refund-types" type="checkbox" class="awesome-switcher__input">
+		<span class="awesome-switcher__control"></span>
+		
+			<span class="label label_simple awesome-switcher__text">Only Card refund</span>
+		
+	</label> </div>
                 </div>
                 <div class="settings__row">
-                  <div class="form-group form-group_inline">
-                    <label for="send-alert" class="label label_simple form-group__label form-group__label_static">All Products</label>
-                    <label class="awesome-switcher awesome-switcher_one-color form-group__switcher">
-                      <input id="all-products" type="checkbox" class="awesome-switcher__input">
-                      <span class="awesome-switcher__control"></span>
-                      <span class="label label_simple awesome-switcher__text">Only Device return</span>
-                    </label>
-                  </div>
+                  <div class="form-group form-group_inline"> <label for="send-alert" class="label label_simple form-group__label form-group__label_static">All Products</label> <label class="awesome-switcher awesome-switcher_one-color form-group__switcher">
+		<input id="all-products" type="checkbox" class="awesome-switcher__input">
+		<span class="awesome-switcher__control"></span>
+		
+			<span class="label label_simple awesome-switcher__text">Only Device return</span>
+		
+	</label> </div>
                 </div>
                 <div class="settings__table">
                   <div class="settings__thead">
@@ -90,58 +83,42 @@
                   <div class="settings__tbody">
                     <div class="settings__tr">
                       <div class="settings__td settings__td_lg">
-                        <div class="label settings__td-label">To:</div>
-                        <select class="select ">
-                          <option value="Store manager">Store manager</option>
-                          <option value="Administrator">Administrator</option>
-                        </select>
+                        <div class="label settings__td-label">To:</div> <select class="select ">
+						    			<option value="Store manager">Store manager</option>
+						    			<option value="Administrator">Administrator</option>
+						    		</select>
                         <div class="error-message is-hidden">Please select role to whom alert must be sent</div>
                       </div>
                       <div class="settings__td settings__td_sm">
-                        <div class="label settings__td-label">via channel:</div>
-                        <select class="select">
-                          <option value="SMS">SMS</option>
-                          <option value="E-mail">E-mail</option>
-                        </select>
-                      </div>
+                        <div class="label settings__td-label">via channel:</div> <select class="select">
+						    			<option value="SMS">SMS</option>
+						    			<option value="E-mail">E-mail</option>
+						    		</select> </div>
                     </div>
                     <div class="settings__tr">
                       <div class="settings__td settings__td_lg">
-                        <div class="label settings__td-label">To:</div>
-                        <select class="select is-error">
-                          <option value="Store manager">Store manager</option>
-                          <option value="Administrator">Administrator</option>
-                        </select>
+                        <div class="label settings__td-label">To:</div> <select class="select is-error">
+						    			<option value="Store manager">Store manager</option>
+						    			<option value="Administrator">Administrator</option>
+						    		</select>
                         <div class="error-message ">Please select role to whom alert must be sent</div>
                       </div>
                       <div class="settings__td settings__td_sm">
-                        <div class="label settings__td-label">via channel:</div>
-                        <select class="select">
-                          <option value="SMS">SMS</option>
-                          <option value="E-mail">E-mail</option>
-                        </select>
-                      </div>
-                      <button class="btn-remove settings__remove"><span></span></button>
-                    </div>
+                        <div class="label settings__td-label">via channel:</div> <select class="select">
+						    			<option value="SMS">SMS</option>
+						    			<option value="E-mail">E-mail</option>
+						    		</select> </div> <button class="btn-remove settings__remove"><span></span></button> </div>
                   </div>
                   <div class="settings__tfoot">
                     <div class="settings__tr">
-                      <div class="settings__td">
-                        <button class="btn-plus settings__add"></button>
-                      </div>
+                      <div class="settings__td"> <button class="btn-plus settings__add"></button> </div>
                     </div>
                   </div>
                 </div>
                 <div class="settings__footer">
-                  <div class="settings__footer-btn">
-                    <button class="btn btn_primary">Save</button>
-                  </div>
-                  <div class="settings__footer-btn">
-                    <button class="btn btn_primary">Save and Exit</button>
-                  </div>
-                  <div class="settings__footer-btn">
-                    <button class="btn btn_gray">Cancel</button>
-                  </div>
+                  <div class="settings__footer-btn"> <button class="btn btn_primary">Save</button> </div>
+                  <div class="settings__footer-btn"> <button class="btn btn_primary">Save and Exit</button> </div>
+                  <div class="settings__footer-btn"> <button class="btn btn_gray">Cancel</button> </div>
                 </div>
               </div>
             </div>
@@ -155,4 +132,5 @@
     <script type="text/javascript" src="js/app.js"></script>
     <!-- END scripts -->
   </body>
+
 </html>
