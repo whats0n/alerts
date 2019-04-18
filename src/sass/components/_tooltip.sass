@@ -1,0 +1,35 @@
+.tooltip
+  position: relative
+  display: inline-block
+  vertical-align: top
+  font-size: 0
+  line-height: 1
+  +hover
+    .tooltip
+      &__cloud
+        opacity: 1
+        visibility: visible
+  &__icon
+    fill: #333
+    font-size: 16px
+  &__cloud
+    position: absolute
+    padding: 12px
+    margin: 0 0 10px -100px
+    width: 200px
+    left: 50%
+    bottom: 100%
+    opacity: 0
+    visibility: hidden
+    background: $white
+    box-shadow: 0 4px 5px 1px rgba($black, 0.15)
+    font-size: 14px
+    font-weight: 400
+    transition: opacity 0.3s, visibility 0.3s
+    &:after
+      content: ''
+      position: absolute
+      top: 100%
+      left: 50%
+      margin-left: -6px
+      +arr(12, 8, $white, b)

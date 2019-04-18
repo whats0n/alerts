@@ -1,0 +1,126 @@
+<!-- begin settings -->
+<div class="settings">
+  <div class="settings__section">
+    <div class="settings__header">
+      <div class="settings__title">Store Opening/Closing</div>
+    </div>
+    <div class="settings__body">
+      <div class="settings__inner">
+        <div class="settings__row">
+          <div class="form-group form-group_inline">
+            <label for="send-alert" class="label form-group__label">Enable Alert</label>
+            {{mixins.switcher({
+              attrs: 'id="enable-alert"',
+              classList: 'form-group__switcher'
+            })}}
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="label form-group__label">When:</div>
+        </div>
+        <div class="settings__row">
+          <div class="form-group">
+            <div class="form-group__field">
+              <div class="form-group__description">An employee opens or closes a store beyond the stores hours of operation.</div>
+            </div>
+          </div>
+        </div>
+        <div class="settings__table settings__table_store">
+          <div class="settings__thead">
+            <div class="settings__tr">
+              <div class="label settings__td settings__td_xs">Send a notification:</div>
+              <div class="label settings__td settings__td_xs">When Store:</div>
+              <div class="label settings__td settings__td_sm">Grace Period:
+                <span class="tooltip settings__tooltip">
+                  <span class="tooltip__cloud">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, natus.</span>
+                  {{mixins.icon('info', 'tooltip__icon')}}
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="settings__tbody">
+            {% for item in [
+              { when: 'Opens Early' },
+              { when: 'Opens Late' },
+              { when: 'Closes Early' },
+              { when: 'Closes Late' }
+            ] %}
+                <div class="settings__tr">
+                  <div class="settings__td settings__td_xs">
+                    <div class="label settings__td-label">Send a notification:</div>
+                    <div class="settings__switcher">
+                      {{mixins.switcher()}}
+                    </div>
+                  </div>
+                  <div class="settings__td settings__td_xs">
+                    <div class="label settings__td-label">When Store:</div>
+                    <div class="text settings__text">{{item.when or 'Opens Early'}}</div>
+                  </div>
+                  <div class="settings__td settings__td_sm">
+                    <div class="label settings__td-label">Grace Period:</div>
+                    <div class="input-group">
+                      <div class="input-group__control">
+                        <input type="text" class="input">
+                      </div>
+                      <div class="label label_simple input-group__label">Minutes</div>
+                    </div>
+                  </div>
+                </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="settings__table">
+          <div class="settings__thead">
+            <div class="settings__tr">
+              <div class="label settings__td settings__td_lg">To:</div>
+              <div class="label settings__td settings__td_sm">via channel:</div>
+            </div>
+          </div>
+          <div class="settings__tbody">
+            {% for item in range(0,2) %}
+                <div class="settings__tr">
+                  <div class="settings__td settings__td_lg">
+                    <div class="label settings__td-label">To:</div>
+                    <select class="select {% if loop.index != 1 %}is-error{% endif %}">
+                      <option value="Store manager">Store manager</option>
+                      <option value="Administrator">Administrator</option>
+                    </select>
+                    <div class="error-message {% if loop.index == 1 %}is-hidden{% endif %}">Please select role to whom alert must be sent</div>
+                  </div>
+                  <div class="settings__td settings__td_sm">
+                    <div class="label settings__td-label">via channel:</div>
+                    <select class="select">
+                      <option value="SMS">SMS</option>
+                      <option value="E-mail">E-mail</option>
+                    </select>
+                  </div>
+                  {% if loop.index > 1 %}
+                    <button class="btn-remove settings__remove"><span></span></button>
+                  {% endif %}
+                </div>
+            {% endfor %}
+          </div>
+          <div class="settings__tfoot">
+            <div class="settings__tr">
+              <div class="settings__td">
+                <button class="btn-plus settings__add"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="settings__footer">
+          <div class="settings__footer-btn">
+            <button class="btn btn_primary">Save</button>
+          </div>
+          <div class="settings__footer-btn">
+            <button class="btn btn_primary">Save and Close</button>
+          </div>
+          <div class="settings__footer-btn">
+            <button class="btn btn_gray">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end settings -->

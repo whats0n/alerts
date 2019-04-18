@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-
   <head>
     <meta charset="utf-8">
     <title>Alerts Settings</title>
@@ -8,21 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" media="all" href="css/app.css"> </head>
-
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
   <body class="">
     <div id="root">
       <!-- BEGIN content -->
       <!-- begin header -->
-      <header class="header "> <button class="header__back">
-			
-	<svg class="icon icon-arrow-left header__back-icon"><use xlink:href="img/sprite.svg#icon-arrow-left"></use></svg>
-
-		</button> <button class="header__help">
-			
-	<svg class="icon icon-question-option header__help-icon"><use xlink:href="img/sprite.svg#icon-question-option"></use></svg>
-
-		</button>
+      <header class="header ">
+        <button class="header__back">
+          <svg class="icon icon-arrow-left header__back-icon">
+            <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+          </svg>
+        </button>
+        <button class="header__help">
+          <svg class="icon icon-question-option header__help-icon">
+            <use xlink:href="img/sprite.svg#icon-question-option"></use>
+          </svg>
+        </button>
         <div class="header__inner">
           <div class="header__title">Alerts Settings</div>
         </div>
@@ -32,32 +33,30 @@
         <!-- begin messages -->
         <div class="messages">
           <div class="messages__inner">
-            <div class="messages__header"> <select class="select messages__select">
-				
-					<option value="All Alerts 1">All Alerts 1</option>
-				
-					<option value="All Alerts 2">All Alerts 2</option>
-				
-					<option value="All Alerts 3">All Alerts 3</option>
-				
-					<option value="All Alerts 4">All Alerts 4</option>
-				
-					<option value="All Alerts 5">All Alerts 5</option>
-				
-			</select> <button class="btn btn_sm messages__btn" disabled>Bulk change</button> </div>
+            <div class="messages__header">
+              <select class="select messages__select">
+                <option value="All Alerts 1">All Alerts 1</option>
+                <option value="All Alerts 2">All Alerts 2</option>
+                <option value="All Alerts 3">All Alerts 3</option>
+                <option value="All Alerts 4">All Alerts 4</option>
+                <option value="All Alerts 5">All Alerts 5</option>
+              </select>
+              <button class="btn btn_sm messages__btn" disabled>Bulk change</button>
+            </div>
             <div class="messages__body">
               <div class="grid">
                 <div class="grid__header">
                   <div class="grid__header-row">
-                    <div class="grid__column grid__column_checkbox"> <label class="checkbox checkbox_sm">
-		<input type="checkbox" class="checkbox__input" >
-		<span class="checkbox__icon">
-			
-	<svg class="icon icon-check checkbox__icon-in"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
-
-		</span>
-		
-	</label> </div>
+                    <div class="grid__column grid__column_checkbox">
+                      <label class="checkbox checkbox_sm">
+                        <input type="checkbox" class="checkbox__input">
+                        <span class="checkbox__icon">
+                          <svg class="icon icon-check checkbox__icon-in">
+                            <use xlink:href="img/sprite.svg#icon-check"></use>
+                          </svg>
+                        </span>
+                      </label>
+                    </div>
                     <div class="grid__column grid__column_message label">Alert</div>
                     <div class="grid__column grid__column_enabled label">Enabled</div>
                     <div class="grid__column grid__column_to-channel">
@@ -73,11 +72,13 @@
                     <div class="grid__column grid__column_edit"></div>
                   </div>
                   <div class="grid__header-row">
-                    <div class="grid__column grid__column_checkbox"> <button class="btn btn_icon grid__filter" data-modal-control="filters">
-									
-	<svg class="icon icon-filter btn__filter-icon"><use xlink:href="img/sprite.svg#icon-filter"></use></svg>
-
-								</button> </div>
+                    <div class="grid__column grid__column_checkbox">
+                      <button class="btn btn_icon grid__filter" data-modal-control="filters">
+                        <svg class="icon icon-filter btn__filter-icon">
+                          <use xlink:href="img/sprite.svg#icon-filter"></use>
+                        </svg>
+                      </button>
+                    </div>
                     <div class="grid__column grid__column_message"></div>
                     <div class="grid__column grid__column_enabled"></div>
                     <div class="grid__column grid__column_to-channel"></div>
@@ -86,17 +87,22 @@
                 </div>
                 <div class="grid__body">
                   <div class="grid__row">
-                    <div class="grid__column grid__column_checkbox"> <label class="checkbox checkbox_sm">
-		<input type="checkbox" class="checkbox__input" >
-		<span class="checkbox__icon">
-			
-	<svg class="icon icon-check checkbox__icon-in"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
-
-		</span>
-		
-	</label> </div>
+                    <div class="grid__column grid__column_checkbox">
+                      <label class="checkbox checkbox_sm">
+                        <input type="checkbox" class="checkbox__input">
+                        <span class="checkbox__icon">
+                          <svg class="icon icon-check checkbox__icon-in">
+                            <use xlink:href="img/sprite.svg#icon-check"></use>
+                          </svg>
+                        </span>
+                      </label>
+                    </div>
                     <div class="grid__column grid__column_message">Cash register variance</div>
-                    <div class="grid__column grid__column_enabled"> <svg class="icon icon-notification grid__icon grid__icon_active"><use xlink:href="img/sprite.svg#icon-notification"></use></svg> </div>
+                    <div class="grid__column grid__column_enabled">
+                      <svg class="icon icon-notification grid__icon grid__icon_active">
+                        <use xlink:href="img/sprite.svg#icon-notification"></use>
+                      </svg>
+                    </div>
                     <div class="grid__column grid__column_to-channel">
                       <div class="grid__inner">
                         <div class="grid__inner-table">
@@ -111,70 +117,93 @@
                         </div>
                       </div>
                     </div>
-                    <div class="grid__column grid__column_edit"> <button class="btn btn_icon grid__btn">
-									
-	<svg class="icon icon-edit btn__edit-icon"><use xlink:href="img/sprite.svg#icon-edit"></use></svg>
-
-								</button> </div>
+                    <div class="grid__column grid__column_edit">
+                      <button class="btn btn_icon grid__btn">
+                        <svg class="icon icon-edit btn__edit-icon">
+                          <use xlink:href="img/sprite.svg#icon-edit"></use>
+                        </svg>
+                      </button>
+                    </div>
                   </div>
                   <div class="grid__row">
-                    <div class="grid__column grid__column_checkbox"> <label class="checkbox checkbox_sm">
-		<input type="checkbox" class="checkbox__input" >
-		<span class="checkbox__icon">
-			
-	<svg class="icon icon-check checkbox__icon-in"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
-
-		</span>
-		
-	</label> </div>
+                    <div class="grid__column grid__column_checkbox">
+                      <label class="checkbox checkbox_sm">
+                        <input type="checkbox" class="checkbox__input">
+                        <span class="checkbox__icon">
+                          <svg class="icon icon-check checkbox__icon-in">
+                            <use xlink:href="img/sprite.svg#icon-check"></use>
+                          </svg>
+                        </span>
+                      </label>
+                    </div>
                     <div class="grid__column grid__column_message">Cash pickup needed</div>
-                    <div class="grid__column grid__column_enabled"> <svg class="icon icon-notification grid__icon"><use xlink:href="img/sprite.svg#icon-notification"></use></svg> </div>
+                    <div class="grid__column grid__column_enabled">
+                      <svg class="icon icon-notification grid__icon">
+                        <use xlink:href="img/sprite.svg#icon-notification"></use>
+                      </svg>
+                    </div>
                     <div class="grid__column grid__column_to-channel">
                       <div class="grid__inner">
-                        <div class="grid__inner-table"> </div>
+                        <div class="grid__inner-table">
+                        </div>
                       </div>
                     </div>
-                    <div class="grid__column grid__column_edit"> <button class="btn btn_icon grid__btn">
-									
-	<svg class="icon icon-edit btn__edit-icon"><use xlink:href="img/sprite.svg#icon-edit"></use></svg>
-
-								</button> </div>
+                    <div class="grid__column grid__column_edit">
+                      <button class="btn btn_icon grid__btn">
+                        <svg class="icon icon-edit btn__edit-icon">
+                          <use xlink:href="img/sprite.svg#icon-edit"></use>
+                        </svg>
+                      </button>
+                    </div>
                   </div>
                   <div class="grid__row">
-                    <div class="grid__column grid__column_checkbox"> <label class="checkbox checkbox_sm">
-		<input type="checkbox" class="checkbox__input" >
-		<span class="checkbox__icon">
-			
-	<svg class="icon icon-check checkbox__icon-in"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
-
-		</span>
-		
-	</label> </div>
+                    <div class="grid__column grid__column_checkbox">
+                      <label class="checkbox checkbox_sm">
+                        <input type="checkbox" class="checkbox__input">
+                        <span class="checkbox__icon">
+                          <svg class="icon icon-check checkbox__icon-in">
+                            <use xlink:href="img/sprite.svg#icon-check"></use>
+                          </svg>
+                        </span>
+                      </label>
+                    </div>
                     <div class="grid__column grid__column_message">Cash pickup done</div>
-                    <div class="grid__column grid__column_enabled"> <svg class="icon icon-notification grid__icon"><use xlink:href="img/sprite.svg#icon-notification"></use></svg> </div>
+                    <div class="grid__column grid__column_enabled">
+                      <svg class="icon icon-notification grid__icon">
+                        <use xlink:href="img/sprite.svg#icon-notification"></use>
+                      </svg>
+                    </div>
                     <div class="grid__column grid__column_to-channel">
                       <div class="grid__inner">
-                        <div class="grid__inner-table"> </div>
+                        <div class="grid__inner-table">
+                        </div>
                       </div>
                     </div>
-                    <div class="grid__column grid__column_edit"> <button class="btn btn_icon grid__btn">
-									
-	<svg class="icon icon-edit btn__edit-icon"><use xlink:href="img/sprite.svg#icon-edit"></use></svg>
-
-								</button> </div>
+                    <div class="grid__column grid__column_edit">
+                      <button class="btn btn_icon grid__btn">
+                        <svg class="icon icon-edit btn__edit-icon">
+                          <use xlink:href="img/sprite.svg#icon-edit"></use>
+                        </svg>
+                      </button>
+                    </div>
                   </div>
                   <div class="grid__row">
-                    <div class="grid__column grid__column_checkbox"> <label class="checkbox checkbox_sm">
-		<input type="checkbox" class="checkbox__input" >
-		<span class="checkbox__icon">
-			
-	<svg class="icon icon-check checkbox__icon-in"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
-
-		</span>
-		
-	</label> </div>
+                    <div class="grid__column grid__column_checkbox">
+                      <label class="checkbox checkbox_sm">
+                        <input type="checkbox" class="checkbox__input">
+                        <span class="checkbox__icon">
+                          <svg class="icon icon-check checkbox__icon-in">
+                            <use xlink:href="img/sprite.svg#icon-check"></use>
+                          </svg>
+                        </span>
+                      </label>
+                    </div>
                     <div class="grid__column grid__column_message">Return</div>
-                    <div class="grid__column grid__column_enabled"> <svg class="icon icon-notification grid__icon grid__icon_active"><use xlink:href="img/sprite.svg#icon-notification"></use></svg> </div>
+                    <div class="grid__column grid__column_enabled">
+                      <svg class="icon icon-notification grid__icon grid__icon_active">
+                        <use xlink:href="img/sprite.svg#icon-notification"></use>
+                      </svg>
+                    </div>
                     <div class="grid__column grid__column_to-channel">
                       <div class="grid__inner">
                         <div class="grid__inner-table">
@@ -189,157 +218,199 @@
                         </div>
                       </div>
                     </div>
-                    <div class="grid__column grid__column_edit"> <button class="btn btn_icon grid__btn">
-									
-	<svg class="icon icon-edit btn__edit-icon"><use xlink:href="img/sprite.svg#icon-edit"></use></svg>
-
-								</button> </div>
+                    <div class="grid__column grid__column_edit">
+                      <button class="btn btn_icon grid__btn">
+                        <svg class="icon icon-edit btn__edit-icon">
+                          <use xlink:href="img/sprite.svg#icon-edit"></use>
+                        </svg>
+                      </button>
+                    </div>
                   </div>
                   <div class="grid__row">
-                    <div class="grid__column grid__column_checkbox"> <label class="checkbox checkbox_sm">
-		<input type="checkbox" class="checkbox__input" >
-		<span class="checkbox__icon">
-			
-	<svg class="icon icon-check checkbox__icon-in"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
-
-		</span>
-		
-	</label> </div>
+                    <div class="grid__column grid__column_checkbox">
+                      <label class="checkbox checkbox_sm">
+                        <input type="checkbox" class="checkbox__input">
+                        <span class="checkbox__icon">
+                          <svg class="icon icon-check checkbox__icon-in">
+                            <use xlink:href="img/sprite.svg#icon-check"></use>
+                          </svg>
+                        </span>
+                      </label>
+                    </div>
                     <div class="grid__column grid__column_message">Void</div>
-                    <div class="grid__column grid__column_enabled"> <svg class="icon icon-notification grid__icon"><use xlink:href="img/sprite.svg#icon-notification"></use></svg> </div>
+                    <div class="grid__column grid__column_enabled">
+                      <svg class="icon icon-notification grid__icon">
+                        <use xlink:href="img/sprite.svg#icon-notification"></use>
+                      </svg>
+                    </div>
                     <div class="grid__column grid__column_to-channel">
                       <div class="grid__inner">
-                        <div class="grid__inner-table"> </div>
+                        <div class="grid__inner-table">
+                        </div>
                       </div>
                     </div>
-                    <div class="grid__column grid__column_edit"> <button class="btn btn_icon grid__btn">
-									
-	<svg class="icon icon-edit btn__edit-icon"><use xlink:href="img/sprite.svg#icon-edit"></use></svg>
-
-								</button> </div>
+                    <div class="grid__column grid__column_edit">
+                      <button class="btn btn_icon grid__btn">
+                        <svg class="icon icon-edit btn__edit-icon">
+                          <use xlink:href="img/sprite.svg#icon-edit"></use>
+                        </svg>
+                      </button>
+                    </div>
                   </div>
                   <div class="grid__row">
-                    <div class="grid__column grid__column_checkbox"> <label class="checkbox checkbox_sm">
-		<input type="checkbox" class="checkbox__input" >
-		<span class="checkbox__icon">
-			
-	<svg class="icon icon-check checkbox__icon-in"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
-
-		</span>
-		
-	</label> </div>
+                    <div class="grid__column grid__column_checkbox">
+                      <label class="checkbox checkbox_sm">
+                        <input type="checkbox" class="checkbox__input">
+                        <span class="checkbox__icon">
+                          <svg class="icon icon-check checkbox__icon-in">
+                            <use xlink:href="img/sprite.svg#icon-check"></use>
+                          </svg>
+                        </span>
+                      </label>
+                    </div>
                     <div class="grid__column grid__column_message">Inventory count results</div>
-                    <div class="grid__column grid__column_enabled"> <svg class="icon icon-notification grid__icon"><use xlink:href="img/sprite.svg#icon-notification"></use></svg> </div>
+                    <div class="grid__column grid__column_enabled">
+                      <svg class="icon icon-notification grid__icon">
+                        <use xlink:href="img/sprite.svg#icon-notification"></use>
+                      </svg>
+                    </div>
                     <div class="grid__column grid__column_to-channel">
                       <div class="grid__inner">
-                        <div class="grid__inner-table"> </div>
+                        <div class="grid__inner-table">
+                        </div>
                       </div>
                     </div>
-                    <div class="grid__column grid__column_edit"> <button class="btn btn_icon grid__btn">
-									
-	<svg class="icon icon-edit btn__edit-icon"><use xlink:href="img/sprite.svg#icon-edit"></use></svg>
-
-								</button> </div>
+                    <div class="grid__column grid__column_edit">
+                      <button class="btn btn_icon grid__btn">
+                        <svg class="icon icon-edit btn__edit-icon">
+                          <use xlink:href="img/sprite.svg#icon-edit"></use>
+                        </svg>
+                      </button>
+                    </div>
                   </div>
                   <div class="grid__row">
-                    <div class="grid__column grid__column_checkbox"> <label class="checkbox checkbox_sm">
-		<input type="checkbox" class="checkbox__input" >
-		<span class="checkbox__icon">
-			
-	<svg class="icon icon-check checkbox__icon-in"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
-
-		</span>
-		
-	</label> </div>
+                    <div class="grid__column grid__column_checkbox">
+                      <label class="checkbox checkbox_sm">
+                        <input type="checkbox" class="checkbox__input">
+                        <span class="checkbox__icon">
+                          <svg class="icon icon-check checkbox__icon-in">
+                            <use xlink:href="img/sprite.svg#icon-check"></use>
+                          </svg>
+                        </span>
+                      </label>
+                    </div>
                     <div class="grid__column grid__column_message">Store transfer sent</div>
-                    <div class="grid__column grid__column_enabled"> <svg class="icon icon-notification grid__icon grid__icon_active"><use xlink:href="img/sprite.svg#icon-notification"></use></svg> </div>
+                    <div class="grid__column grid__column_enabled">
+                      <svg class="icon icon-notification grid__icon grid__icon_active">
+                        <use xlink:href="img/sprite.svg#icon-notification"></use>
+                      </svg>
+                    </div>
                     <div class="grid__column grid__column_to-channel">
                       <div class="grid__inner">
-                        <div class="grid__inner-table"> </div>
+                        <div class="grid__inner-table">
+                        </div>
                       </div>
                     </div>
-                    <div class="grid__column grid__column_edit"> <button class="btn btn_icon grid__btn">
-									
-	<svg class="icon icon-edit btn__edit-icon"><use xlink:href="img/sprite.svg#icon-edit"></use></svg>
-
-								</button> </div>
+                    <div class="grid__column grid__column_edit">
+                      <button class="btn btn_icon grid__btn">
+                        <svg class="icon icon-edit btn__edit-icon">
+                          <use xlink:href="img/sprite.svg#icon-edit"></use>
+                        </svg>
+                      </button>
+                    </div>
                   </div>
                   <div class="grid__row">
-                    <div class="grid__column grid__column_checkbox"> <label class="checkbox checkbox_sm">
-		<input type="checkbox" class="checkbox__input" >
-		<span class="checkbox__icon">
-			
-	<svg class="icon icon-check checkbox__icon-in"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
-
-		</span>
-		
-	</label> </div>
+                    <div class="grid__column grid__column_checkbox">
+                      <label class="checkbox checkbox_sm">
+                        <input type="checkbox" class="checkbox__input">
+                        <span class="checkbox__icon">
+                          <svg class="icon icon-check checkbox__icon-in">
+                            <use xlink:href="img/sprite.svg#icon-check"></use>
+                          </svg>
+                        </span>
+                      </label>
+                    </div>
                     <div class="grid__column grid__column_message">Store transfer Not Received</div>
-                    <div class="grid__column grid__column_enabled"> <svg class="icon icon-notification grid__icon"><use xlink:href="img/sprite.svg#icon-notification"></use></svg> </div>
+                    <div class="grid__column grid__column_enabled">
+                      <svg class="icon icon-notification grid__icon">
+                        <use xlink:href="img/sprite.svg#icon-notification"></use>
+                      </svg>
+                    </div>
                     <div class="grid__column grid__column_to-channel">
                       <div class="grid__inner">
-                        <div class="grid__inner-table"> </div>
+                        <div class="grid__inner-table">
+                        </div>
                       </div>
                     </div>
-                    <div class="grid__column grid__column_edit"> <button class="btn btn_icon grid__btn">
-									
-	<svg class="icon icon-edit btn__edit-icon"><use xlink:href="img/sprite.svg#icon-edit"></use></svg>
-
-								</button> </div>
+                    <div class="grid__column grid__column_edit">
+                      <button class="btn btn_icon grid__btn">
+                        <svg class="icon icon-edit btn__edit-icon">
+                          <use xlink:href="img/sprite.svg#icon-edit"></use>
+                        </svg>
+                      </button>
+                    </div>
                   </div>
                   <div class="grid__row">
-                    <div class="grid__column grid__column_checkbox"> <label class="checkbox checkbox_sm">
-		<input type="checkbox" class="checkbox__input" >
-		<span class="checkbox__icon">
-			
-	<svg class="icon icon-check checkbox__icon-in"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
-
-		</span>
-		
-	</label> </div>
+                    <div class="grid__column grid__column_checkbox">
+                      <label class="checkbox checkbox_sm">
+                        <input type="checkbox" class="checkbox__input">
+                        <span class="checkbox__icon">
+                          <svg class="icon icon-check checkbox__icon-in">
+                            <use xlink:href="img/sprite.svg#icon-check"></use>
+                          </svg>
+                        </span>
+                      </label>
+                    </div>
                     <div class="grid__column grid__column_message">Low Stock</div>
-                    <div class="grid__column grid__column_enabled"> <svg class="icon icon-notification grid__icon"><use xlink:href="img/sprite.svg#icon-notification"></use></svg> </div>
+                    <div class="grid__column grid__column_enabled">
+                      <svg class="icon icon-notification grid__icon">
+                        <use xlink:href="img/sprite.svg#icon-notification"></use>
+                      </svg>
+                    </div>
                     <div class="grid__column grid__column_to-channel">
                       <div class="grid__inner">
-                        <div class="grid__inner-table"> </div>
+                        <div class="grid__inner-table">
+                        </div>
                       </div>
                     </div>
-                    <div class="grid__column grid__column_edit"> <button class="btn btn_icon grid__btn">
-									
-	<svg class="icon icon-edit btn__edit-icon"><use xlink:href="img/sprite.svg#icon-edit"></use></svg>
-
-								</button> </div>
+                    <div class="grid__column grid__column_edit">
+                      <button class="btn btn_icon grid__btn">
+                        <svg class="icon icon-edit btn__edit-icon">
+                          <use xlink:href="img/sprite.svg#icon-edit"></use>
+                        </svg>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="messages__footer"> </div>
-              <div class="pagination messages__pagination"> <a href="#" class="pagination__prev">
-	<svg class="icon icon-angle-left pagination__prev-icon"><use xlink:href="img/sprite.svg#icon-angle-left"></use></svg>
-</a>
+              <div class="messages__footer">
+              </div>
+              <div class="pagination messages__pagination">
+                <a href="#" class="pagination__prev">
+                  <svg class="icon icon-angle-left pagination__prev-icon">
+                    <use xlink:href="img/sprite.svg#icon-angle-left"></use>
+                  </svg>
+                </a>
                 <ul class="pagination__list">
-                  <li class="pagination__item"> <a href="#" class="pagination__link">
-									
-										1
-									
-								</a> </li>
-                  <li class="pagination__item"> <a href="#" class="pagination__link">
-									
-										2
-									
-								</a> </li>
-                  <li class="pagination__item"> <a href="#" class="pagination__link">
-									
-										...
-									
-								</a> </li>
-                  <li class="pagination__item"> <a href="#" class="pagination__link">
-									
-										22
-									
-								</a> </li>
-                </ul> <a href="#" class="pagination__next">
-	<svg class="icon icon-angle-right pagination__next-icon"><use xlink:href="img/sprite.svg#icon-angle-right"></use></svg>
-</a> </div>
+                  <li class="pagination__item">
+                    <a href="#" class="pagination__link"> 1 </a>
+                  </li>
+                  <li class="pagination__item">
+                    <a href="#" class="pagination__link"> 2 </a>
+                  </li>
+                  <li class="pagination__item">
+                    <a href="#" class="pagination__link"> ... </a>
+                  </li>
+                  <li class="pagination__item">
+                    <a href="#" class="pagination__link"> 22 </a>
+                  </li>
+                </ul>
+                <a href="#" class="pagination__next">
+                  <svg class="icon icon-angle-right pagination__next-icon">
+                    <use xlink:href="img/sprite.svg#icon-angle-right"></use>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -348,75 +419,55 @@
         <div class="filters" data-modal="filters">
           <div class="filters__container" data-modal-container>
             <div class="filters__box">
-              <div class="label filters__label">Label:</div> <select class="select">
-						
-						  <option value="value-1">value-1</option>
-						
-						  <option value="value-2">value-2</option>
-						
-						  <option value="value-3">value-3</option>
-						
-						  <option value="value-4">value-4</option>
-						
-						  <option value="value-5">value-5</option>
-						
-					</select> </div>
+              <div class="label filters__label">Label:</div>
+              <select class="select">
+                <option value="value-1">value-1</option>
+                <option value="value-2">value-2</option>
+                <option value="value-3">value-3</option>
+                <option value="value-4">value-4</option>
+                <option value="value-5">value-5</option>
+              </select>
+            </div>
             <div class="filters__box">
-              <div class="label filters__label">Label:</div> <select class="select">
-						
-						  <option value="value-1">value-1</option>
-						
-						  <option value="value-2">value-2</option>
-						
-						  <option value="value-3">value-3</option>
-						
-						  <option value="value-4">value-4</option>
-						
-						  <option value="value-5">value-5</option>
-						
-					</select> </div>
+              <div class="label filters__label">Label:</div>
+              <select class="select">
+                <option value="value-1">value-1</option>
+                <option value="value-2">value-2</option>
+                <option value="value-3">value-3</option>
+                <option value="value-4">value-4</option>
+                <option value="value-5">value-5</option>
+              </select>
+            </div>
             <div class="filters__box">
-              <div class="label filters__label">Label:</div> <select class="select">
-						
-						  <option value="value-1">value-1</option>
-						
-						  <option value="value-2">value-2</option>
-						
-						  <option value="value-3">value-3</option>
-						
-						  <option value="value-4">value-4</option>
-						
-						  <option value="value-5">value-5</option>
-						
-					</select> </div>
+              <div class="label filters__label">Label:</div>
+              <select class="select">
+                <option value="value-1">value-1</option>
+                <option value="value-2">value-2</option>
+                <option value="value-3">value-3</option>
+                <option value="value-4">value-4</option>
+                <option value="value-5">value-5</option>
+              </select>
+            </div>
             <div class="filters__box">
-              <div class="label filters__label">Label:</div> <select class="select">
-						
-						  <option value="value-1">value-1</option>
-						
-						  <option value="value-2">value-2</option>
-						
-						  <option value="value-3">value-3</option>
-						
-						  <option value="value-4">value-4</option>
-						
-						  <option value="value-5">value-5</option>
-						
-					</select> </div>
+              <div class="label filters__label">Label:</div>
+              <select class="select">
+                <option value="value-1">value-1</option>
+                <option value="value-2">value-2</option>
+                <option value="value-3">value-3</option>
+                <option value="value-4">value-4</option>
+                <option value="value-5">value-5</option>
+              </select>
+            </div>
             <div class="filters__box">
-              <div class="label filters__label">Label:</div> <select class="select">
-						
-						  <option value="value-1">value-1</option>
-						
-						  <option value="value-2">value-2</option>
-						
-						  <option value="value-3">value-3</option>
-						
-						  <option value="value-4">value-4</option>
-						
-						  <option value="value-5">value-5</option>
-						
-					</select> </div>
+              <div class="label filters__label">Label:</div>
+              <select class="select">
+                <option value="value-1">value-1</option>
+                <option value="value-2">value-2</option>
+                <option value="value-3">value-3</option>
+                <option value="value-4">value-4</option>
+                <option value="value-5">value-5</option>
+              </select>
+            </div>
           </div>
         </div>
         <!-- end filters -->
@@ -427,5 +478,4 @@
     <script type="text/javascript" src="js/app.js"></script>
     <!-- END scripts -->
   </body>
-
 </html>

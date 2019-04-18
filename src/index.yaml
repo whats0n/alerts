@@ -1,6 +1,7 @@
 ProjectTitle: alerts
 
 PageList:
+- file: store-opening-closing.html
 - file: page.html
 - file: page-v2.html
 - file: modals.html
@@ -39,6 +40,7 @@ PageList:
 - file: email-error-small.html
 
 # METRO
+- file: store-opening-closing-metro.html
 - file: page-metro.html
 - file: modals-metro.html
 - file: messages-metro.html
@@ -60,6 +62,7 @@ PageList:
 - file: e-error-small-metro.html
 
 # BOOST
+- file: store-opening-closing-boost.html
 - file: page-boost.html
 - file: modals-boost.html
 - file: messages-boost.html
