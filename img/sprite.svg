@@ -15,6 +15,9 @@
     <path d="M422 77.7l-67.1-66.8C347.7 3.6 339 0 328.9 0c-10.3 0-18.8 3.6-25.7 10.8L255.8 58l118.8 118.8 47.4-47.4c7-7 10.6-15.6 10.6-25.7-.1-10-3.6-18.6-10.6-26z"/>
 </symbol><symbol id="icon-filter" viewBox="0 0 971.986 971.986">
     <path d="M370.216 459.3c10.2 11.1 15.8 25.6 15.8 40.6v442c0 26.601 32.1 40.101 51.1 21.4l123.3-141.3c16.5-19.8 25.6-29.601 25.6-49.2V500c0-15 5.7-29.5 15.8-40.601L955.615 75.5c26.5-28.8 6.101-75.5-33.1-75.5h-873c-39.2 0-59.7 46.6-33.1 75.5l353.801 383.8z"/>
+</symbol><symbol id="icon-info" viewBox="0 0 20 20">
+    <title/>
+    <path d="M9 15h2V9H9v6zm1-15C4.5 0 0 4.5 0 10s4.5 10 10 10 10-4.5 10-10S15.5 0 10 0zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zM9 7h2V5H9v2z" fill-rule="evenodd"/>
 </symbol><symbol id="icon-notification" viewBox="0 0 61.3 76.3">
     <style>
         .st0{fill:#231f20}.st1{fill:none;stroke:#231f20;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10}

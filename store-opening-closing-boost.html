@@ -1,0 +1,248 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Alerts Settings</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
+  <body class="is-boost">
+    <div id="root">
+      <!-- BEGIN content -->
+      <!-- begin header -->
+      <header class="header ">
+        <button class="header__back">
+          <svg class="icon icon-arrow-left header__back-icon">
+            <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+          </svg>
+        </button>
+        <button class="header__help">
+          <svg class="icon icon-question-option header__help-icon">
+            <use xlink:href="img/sprite.svg#icon-question-option"></use>
+          </svg>
+        </button>
+        <div class="header__inner">
+          <div class="header__title">Alerts Settings</div>
+        </div>
+      </header>
+      <!-- end header -->
+      <div class="main">
+        <!-- begin settings -->
+        <div class="settings">
+          <div class="settings__section">
+            <div class="settings__header">
+              <div class="settings__title">Store Opening/Closing</div>
+            </div>
+            <div class="settings__body">
+              <div class="settings__inner">
+                <div class="settings__row">
+                  <div class="form-group form-group_inline">
+                    <label for="send-alert" class="label form-group__label">Enable Alert</label>
+                    <label class="awesome-switcher form-group__switcher">
+                      <input id="enable-alert" type="checkbox" class="awesome-switcher__input">
+                      <span class="awesome-switcher__control"></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="label form-group__label">When:</div>
+                </div>
+                <div class="settings__row">
+                  <div class="form-group">
+                    <div class="form-group__field">
+                      <div class="form-group__description">An employee opens or closes a store beyond the stores hours of operation.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="settings__table settings__table_store">
+                  <div class="settings__thead">
+                    <div class="settings__tr">
+                      <div class="label settings__td settings__td_xs">Send a notification:</div>
+                      <div class="label settings__td settings__td_xs">When Store:</div>
+                      <div class="label settings__td settings__td_sm">Grace Period: <span class="tooltip settings__tooltip">
+                          <span class="tooltip__cloud">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, natus.</span>
+                          <svg class="icon icon-info tooltip__icon">
+                            <use xlink:href="img/sprite.svg#icon-info"></use>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="settings__tbody">
+                    <div class="settings__tr">
+                      <div class="settings__td settings__td_xs">
+                        <div class="label settings__td-label">Send a notification:</div>
+                        <div class="settings__switcher">
+                          <label class="awesome-switcher ">
+                            <input type="checkbox" class="awesome-switcher__input">
+                            <span class="awesome-switcher__control"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="settings__td settings__td_xs">
+                        <div class="label settings__td-label">When Store:</div>
+                        <div class="text settings__text">Opens Early</div>
+                      </div>
+                      <div class="settings__td settings__td_sm">
+                        <div class="label settings__td-label">Grace Period:</div>
+                        <div class="input-group">
+                          <div class="input-group__control">
+                            <input type="text" class="input">
+                          </div>
+                          <div class="label label_simple input-group__label">Minutes</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="settings__tr">
+                      <div class="settings__td settings__td_xs">
+                        <div class="label settings__td-label">Send a notification:</div>
+                        <div class="settings__switcher">
+                          <label class="awesome-switcher ">
+                            <input type="checkbox" class="awesome-switcher__input">
+                            <span class="awesome-switcher__control"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="settings__td settings__td_xs">
+                        <div class="label settings__td-label">When Store:</div>
+                        <div class="text settings__text">Opens Late</div>
+                      </div>
+                      <div class="settings__td settings__td_sm">
+                        <div class="label settings__td-label">Grace Period:</div>
+                        <div class="input-group">
+                          <div class="input-group__control">
+                            <input type="text" class="input">
+                          </div>
+                          <div class="label label_simple input-group__label">Minutes</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="settings__tr">
+                      <div class="settings__td settings__td_xs">
+                        <div class="label settings__td-label">Send a notification:</div>
+                        <div class="settings__switcher">
+                          <label class="awesome-switcher ">
+                            <input type="checkbox" class="awesome-switcher__input">
+                            <span class="awesome-switcher__control"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="settings__td settings__td_xs">
+                        <div class="label settings__td-label">When Store:</div>
+                        <div class="text settings__text">Closes Early</div>
+                      </div>
+                      <div class="settings__td settings__td_sm">
+                        <div class="label settings__td-label">Grace Period:</div>
+                        <div class="input-group">
+                          <div class="input-group__control">
+                            <input type="text" class="input">
+                          </div>
+                          <div class="label label_simple input-group__label">Minutes</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="settings__tr">
+                      <div class="settings__td settings__td_xs">
+                        <div class="label settings__td-label">Send a notification:</div>
+                        <div class="settings__switcher">
+                          <label class="awesome-switcher ">
+                            <input type="checkbox" class="awesome-switcher__input">
+                            <span class="awesome-switcher__control"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="settings__td settings__td_xs">
+                        <div class="label settings__td-label">When Store:</div>
+                        <div class="text settings__text">Closes Late</div>
+                      </div>
+                      <div class="settings__td settings__td_sm">
+                        <div class="label settings__td-label">Grace Period:</div>
+                        <div class="input-group">
+                          <div class="input-group__control">
+                            <input type="text" class="input">
+                          </div>
+                          <div class="label label_simple input-group__label">Minutes</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="settings__table">
+                  <div class="settings__thead">
+                    <div class="settings__tr">
+                      <div class="label settings__td settings__td_lg">To:</div>
+                      <div class="label settings__td settings__td_sm">via channel:</div>
+                    </div>
+                  </div>
+                  <div class="settings__tbody">
+                    <div class="settings__tr">
+                      <div class="settings__td settings__td_lg">
+                        <div class="label settings__td-label">To:</div>
+                        <select class="select ">
+                          <option value="Store manager">Store manager</option>
+                          <option value="Administrator">Administrator</option>
+                        </select>
+                        <div class="error-message is-hidden">Please select role to whom alert must be sent</div>
+                      </div>
+                      <div class="settings__td settings__td_sm">
+                        <div class="label settings__td-label">via channel:</div>
+                        <select class="select">
+                          <option value="SMS">SMS</option>
+                          <option value="E-mail">E-mail</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="settings__tr">
+                      <div class="settings__td settings__td_lg">
+                        <div class="label settings__td-label">To:</div>
+                        <select class="select is-error">
+                          <option value="Store manager">Store manager</option>
+                          <option value="Administrator">Administrator</option>
+                        </select>
+                        <div class="error-message ">Please select role to whom alert must be sent</div>
+                      </div>
+                      <div class="settings__td settings__td_sm">
+                        <div class="label settings__td-label">via channel:</div>
+                        <select class="select">
+                          <option value="SMS">SMS</option>
+                          <option value="E-mail">E-mail</option>
+                        </select>
+                      </div>
+                      <button class="btn-remove settings__remove"><span></span></button>
+                    </div>
+                  </div>
+                  <div class="settings__tfoot">
+                    <div class="settings__tr">
+                      <div class="settings__td">
+                        <button class="btn-plus settings__add"></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="settings__footer">
+                  <div class="settings__footer-btn">
+                    <button class="btn btn_primary">Save</button>
+                  </div>
+                  <div class="settings__footer-btn">
+                    <button class="btn btn_primary">Save and Close</button>
+                  </div>
+                  <div class="settings__footer-btn">
+                    <button class="btn btn_gray">Cancel</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end settings -->
+      </div>
+      <!-- END content -->
+    </div>
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
+</html>
