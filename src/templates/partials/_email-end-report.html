@@ -27,8 +27,8 @@
             >
               <thead class="report__header">
                 <tr>
-                  <td style="padding: 5px 0; font-size: 18px; font-weight: 500; line-height: 1.2;">Store(s)</td>
-                  <td style="padding: 5px 0; font-size: 18px; font-weight: 500; line-height: 1.2;">Register(s)</td>
+                  <td style="padding: 5px 0; width: 50%; font-size: 18px; font-weight: 500; line-height: 1.2;">Store(s)</td>
+                  <td style="padding: 5px 0; width: 50%; font-size: 18px; font-weight: 500; line-height: 1.2;">Register(s)</td>
                 </tr>
               </thead>
               <tbody>
@@ -37,11 +37,11 @@
                   { store: 'Broad st.', register: 'Reg 2' }
                 ] %}
                   <tr class="report__row">
-                    <td style="padding: 5px 0;" class="report__col">
+                    <td style="padding: 5px 0; width: 50%;" class="report__col">
                       <div class="report__label" style="display: none; opacity: 0.5; font-size: 14px; font-weight: 400; line-height: 1.2;">Store(s)</div>
                       <div class="report__value" style="color: #ec4a41; font-size: 14px; font-weight: 400; line-height: 1.2;">{{item.store}}</div>
                     </td>
-                    <td style="padding: 5px 0;" class="report__col">
+                    <td style="padding: 5px 0; width: 50%;" class="report__col">
                       <div class="report__label" style="display: none; opacity: 0.5; font-size: 14px; font-weight: 400; line-height: 1.2;">Register(s)</div>
                       <div class="report__value" style="color: #ec4a41; font-size: 14px; font-weight: 400; line-height: 1.2;">{{item.register}}</div>
                     </td>
@@ -89,23 +89,23 @@
                   { store: 'Broad st.', register: 'Reg 2', variance: '+$12.50', closedBy: 'Michael Jordan', time: '09:05 pm', state: true }
                 ] %}
                   <tr class="report__row">
-                    <td style="padding: 10px 0; border-bottom: 1px solid rgba(51,51,51,.3);" class="report__col">
+                    <td style="padding: 10px 0; border-bottom: 1px solid #c1c1c1;" class="report__col">
                       <div class="report__label" style="display: none; opacity: 0.5; font-size: 14px; font-weight: 400; line-height: 1.2;">Store(s)</div>
                       <div class="report__value" style="font-size: 14px; font-weight: 400; line-height: 1.2;">{{item.store}}</div>
                     </td>
-                    <td style="padding: 10px 0; border-bottom: 1px solid rgba(51,51,51,.3);" class="report__col">
+                    <td style="padding: 10px 0; border-bottom: 1px solid #c1c1c1;" class="report__col">
                       <div class="report__label" style="display: none; opacity: 0.5; font-size: 14px; font-weight: 400; line-height: 1.2;">Register(s)</div>
                       <div class="report__value" style="font-size: 14px; font-weight: 400; line-height: 1.2;">{{item.register}}</div>
                     </td>
-                    <td style="padding: 10px 0; border-bottom: 1px solid rgba(51,51,51,.3);" class="report__col">
+                    <td style="padding: 10px 0; border-bottom: 1px solid #c1c1c1;" class="report__col">
                       <div class="report__label" style="display: none; opacity: 0.5; font-size: 14px; font-weight: 400; line-height: 1.2;">Variance</div>
                       <div class="report__value" style="{% if item.state %}color: #22b745;{% else %}color: #ec4a41;{% endif %} font-size: 14px; font-weight: 400; line-height: 1.2;">{{item.variance}}</div>
                     </td>
-                    <td style="padding: 10px 0; border-bottom: 1px solid rgba(51,51,51,.3);" class="report__col">
+                    <td style="padding: 10px 0; border-bottom: 1px solid #c1c1c1;" class="report__col">
                       <div class="report__label" style="display: none; opacity: 0.5; font-size: 14px; font-weight: 400; line-height: 1.2;">Closed By</div>
                       <div class="report__value" style="font-size: 14px; font-weight: 400; line-height: 1.2;">{{item.closedBy}}</div>
                     </td>
-                    <td style="padding: 10px 0; border-bottom: 1px solid rgba(51,51,51,.3);" class="report__col">
+                    <td style="padding: 10px 0; border-bottom: 1px solid #c1c1c1;" class="report__col">
                       <div class="report__label" style="display: none; opacity: 0.5; font-size: 14px; font-weight: 400; line-height: 1.2;">Time</div>
                       <div class="report__value" style="font-size: 14px; font-weight: 400; line-height: 1.2;">{{item.time}}</div>
                     </td>
