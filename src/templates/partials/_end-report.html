@@ -1,0 +1,77 @@
+<div class="section report">
+  <div class="report__section">
+    <div class="report__label">Stores with open registers:</div>
+    <div class="report__container">
+      <div class="report__table report__table_grid">
+        <div class="report__table-header">
+          <div class="report__table-row">
+            <div class="report__table-col report__table-col_header">Store(s)</div>
+            <div class="report__table-col report__table-col_header">Register(s)</div>
+          </div>
+        </div>
+        <div class="report__table-body">
+          {% for item in [
+            { store: 'Main st.', register: 'Reg 1, Reg 3' },
+            { store: 'Broad st.', register: 'Reg 2' }
+          ] %}
+            <div class="report__table-row">
+              <div class="report__table-col report__table-col_body">
+                <div class="report__table-label">Store(s)</div>
+                <div class="report__table-value is-red">{{item.store}}</div>
+              </div>
+              <div class="report__table-col report__table-col_body">
+                <div class="report__table-label">Register(s)</div>
+                <div class="report__table-value is-red">{{item.register}}</div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="report__section">
+    <div class="report__label">Stores with cash register variances:</div>
+    <div class="report__container">
+      <div class="report__table">
+        <div class="report__table-header">
+          <div class="report__table-row">
+            <div class="report__table-col report__table-col_header">Store(s)</div>
+            <div class="report__table-col report__table-col_header">Register(s)</div>
+            <div class="report__table-col report__table-col_header">Variance</div>
+            <div class="report__table-col report__table-col_header">Closed By</div>
+            <div class="report__table-col report__table-col_header">Time</div>
+          </div>
+        </div>
+        <div class="report__table-body">
+          {% for item in [
+            { store: 'Main st.', register: 'Reg 1', variance: '-$885.00', closedBy: 'Bob Smith', time: '09:44 pm', state: false },
+            { store: 'Broad st.', register: 'Reg 2', variance: '+$12.50', closedBy: 'Michael Jordan', time: '09:05 pm', state: true }
+          ] %}
+            <div class="report__table-row">
+              <div class="report__table-col report__table-col_body">
+                <div class="report__table-label">Store(s)</div>
+                <div class="report__table-value">{{item.store}}</div>
+              </div>
+              <div class="report__table-col report__table-col_body">
+                <div class="report__table-label">Register(s)</div>
+                <div class="report__table-value">{{item.register}}</div>
+              </div>
+              <div class="report__table-col report__table-col_body">
+                <div class="report__table-label">Variance</div>
+                <div class="report__table-value {% if item.state %}is-green{% else %}is-red{% endif %}">{{item.variance}}</div>
+              </div>
+              <div class="report__table-col report__table-col_body">
+                <div class="report__table-label">Closed By</div>
+                <div class="report__table-value">{{item.closedBy}}</div>
+              </div>
+              <div class="report__table-col report__table-col_body">
+                <div class="report__table-label">Time</div>
+                <div class="report__table-value">{{item.time}}</div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

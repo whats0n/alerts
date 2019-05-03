@@ -16,6 +16,7 @@ PageList:
 - file: search-result.html
 - file: search-empty.html
 - file: refund.html
+- file: end-report.html
 
 - file: matched.html
 - file: mismatch.html
@@ -39,6 +40,8 @@ PageList:
 - file: email-small.html
 - file: email-error-small.html
 
+- file: email-end-report.html
+
 # METRO
 - file: store-opening-closing-metro.html
 - file: page-metro.html
@@ -49,6 +52,7 @@ PageList:
 - file: store-transfer-out-metro.html
 - file: inventory-count-results-metro.html
 - file: refund-metro.html
+- file: end-report-metro.html
 
 - file: matched-metro.html
 - file: mismatch-metro.html
@@ -71,6 +75,7 @@ PageList:
 - file: store-transfer-out-boost.html
 - file: inventory-count-results-boost.html
 - file: refund-boost.html
+- file: end-report-boost.html
 
 - file: matched-boost.html
 - file: mismatch-boost.html
