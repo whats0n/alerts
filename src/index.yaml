@@ -65,6 +65,8 @@ PageList:
 - file: e-small-metro.html
 - file: e-error-small-metro.html
 
+- file: email-end-report-metro.html
+
 # BOOST
 - file: store-opening-closing-boost.html
 - file: page-boost.html
@@ -87,3 +89,5 @@ PageList:
 - file: e-empty-boost.html
 - file: e-small-boost.html
 - file: e-error-small-boost.html
+
+- file: email-end-report-boost.html

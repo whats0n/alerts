@@ -37,7 +37,7 @@
           cellspacing="0"
           cellpadding="0"
           width="600"
-          style="table-layout: fixed; padding: 0; margin: 0 auto; border-collapse: collapse; border-spacing: 0; width: 100%; max-width: 600px; color: #fff; background: #2e99db; text-align: center;"
+          style="table-layout: fixed; padding: 0; margin: 0 auto; border-collapse: collapse; border-spacing: 0; width: 100%; max-width: 600px; color: #fff; background: {% if theme == 'is-metro' %}#141547{% elif theme == 'is-boost' %}#2e2e2e{% else %}#2e99db{% endif %}; text-align: center;"
         >
           <tr>
             <td style="padding: 15px; width: 50px; font-size: 0;">
